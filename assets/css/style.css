@@ -3,7 +3,6 @@
 --------------------------------------------------------------*/
 body {
   font-family: 'Nunito', sans-serif;
-  color: #fff;
 }
 
 a {
@@ -364,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .container, #hero .container {
-  padding-top: 100px;
+  padding-top: 160px;
 }
 
 #hero h1 {
@@ -479,7 +478,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 100px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 
@@ -492,24 +491,17 @@ section {
   padding-bottom: 30px;
 }
 
+.section-title h3{
+  text-align: center;
+  padding-bottom: 0;
+}
+
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-}
-
-.section-title h2::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #5846f9;
-  bottom: 0;
-  left: calc(50% - 25px);
 }
 
 .section-title p {
@@ -766,6 +758,10 @@ section {
   border-top: 1px solid #8577fb;
 }
 
+.copyright a{
+color: #fff;
+}
+
 #footer .credits {
   padding-top: 5px;
   font-size: 13px;
@@ -795,4 +791,29 @@ section {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team {
+  margin: 0 auto;
+  float: none;
+  background: #fff;
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px){
+  .team .member{
+  max-width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: block;
+}
 }
