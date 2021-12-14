@@ -90,7 +90,7 @@
           <h2 align="justify">DreamShot is a startup challenge aiming to strengthen the youth budding entrepreneurs in Sri Lanka to transform their ideas into a real startup or scale the existing startup to the growth stage with extensive business
             coaching and field
             expertise with possible seed funding of up to 250,000 Sri Lankan rupees.</h2>
-          <div><a target="_blank" href="#" class="btn-get-started scrollto">Register</a>
+          <div><a data-toggle="modal" data-target="#registrationClosed"  target="_blank" href="#" class="btn-get-started scrollto">Register</a>
             <a target="_blank" href="https://cutt.ly/fEp6alb" class="btn-get-started scrollto">Terms & Conditions</a>
           </div>
 
@@ -99,6 +99,25 @@
       
     </div>
 
+<!-- Registration closed modal -->
+<div class="modal fade" id="registrationClosed" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Registration Closed!!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Oh no! you are a bit late. Registration for DreamShot Startup challenge has been closed!!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
   </section><!-- End Hero -->
 
   <main id="main">
@@ -518,6 +537,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- PopUp JS File -->
+  <script src="assets/js/pop-up.js"></script>
 
 </body>
 
