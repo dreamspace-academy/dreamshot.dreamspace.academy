@@ -857,7 +857,37 @@ hr {
 # Registration Closed Modal
 --------------------------------------------------------------*/
 
-
 .terms-lines p {
   margin: 0 2px 0px 12px;
+}
+
+/*--------------------------------------------------------------
+# Contact form Modal
+--------------------------------------------------------------*/
+
+#contact-form-button .container-box
+{
+  display:inline-block; 
+  padding:10px; 
+  background: rgba(255, 255, 255, .8);
+  border: 1px solid #fff; 
+  position: fixed;
+    top: 55%;
+    left: 0;
+
+}
+
+#contact-form .modal-content
+{
+  background: rgba(255, 255, 255, .7);  
+}
+
+
+#contact-form-button .rotated
+{
+  -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    transform-origin: top left;  
 }
