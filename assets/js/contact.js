@@ -24,7 +24,7 @@
     var res = confirm("Thank you for your message. \n\nWe will respond to you as soon as possible. \n\nKind regards, \nDreamShot Team");
     if (res == true)
     {
-      window.location.replace("file:///E:/dreamshot.dreamspace.academy/dreamshot.dreamspace.academy/index.html");
+      window.location.replace("https://dreamshot.dreamspace.academy/");
     }
 
     return false;
