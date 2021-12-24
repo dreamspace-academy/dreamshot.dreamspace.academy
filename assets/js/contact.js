@@ -2,11 +2,6 @@
   exports.submitGoogleForm = submitGoogleForm;
 
   function submitGoogleForm(form) {
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('subject').value = '';
-    document.getElementById('message').value = '';
 
     try {
       var data = [].slice.call(form).map(function(control) {
@@ -26,15 +21,10 @@
 
     form.parentNode.className += ' submitted';
 
-    $('#contact-form').on('submit', function(e){
-      $('#registrationClosed').modal('show');
-      e.preventDefault();
-    });
-
     var res = confirm("Thank you for your message. \n\nWe will respond to you as soon as possible. \n\nKind regards, \nDreamShot Team");
     if (res == true)
     {
-      window.location.replace("https://dreamshot.dreamspace.academy/");
+      window.location.replace("file:///E:/dreamshot.dreamspace.academy/dreamshot.dreamspace.academy/index.html");
     }
 
     return false;
