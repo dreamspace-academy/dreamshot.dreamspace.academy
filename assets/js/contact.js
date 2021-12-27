@@ -20,12 +20,14 @@
     } catch(e) {}
 
     form.parentNode.className += ' submitted';
-
-    var res = confirm("Thank you for your message. \n\nWe will respond to you as soon as possible. \n\nKind regards, \nDreamShot Team");
-    if (res == true)
-    {
-      window.location.replace("https://dreamshot.dreamspace.academy/");
-    }
+    const sender_name = document.getElementById('name').value;
+    document.getElementById("formModelTitleName").innerHTML = sender_name;
+    $("#formConfirmation").modal();
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
 
     return false;
   }
