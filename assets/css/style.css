@@ -58,7 +58,19 @@ h1, h2, h3, h4, h5, h6 {
     transition-delay: 0 !important;
   }
 }
-
+/*--------------------------------------------------------------
+# Pre Header
+--------------------------------------------------------------*/
+#pre-header {
+  background-color: #013447;
+  text-align: center;
+  height: 25px;
+}
+#pre-header span {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 0px;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -504,6 +516,7 @@ section {
   text-transform: uppercase;
   padding-bottom: 10px;
   position: relative;
+  color: #022b3b;
 }
 
 hr {
