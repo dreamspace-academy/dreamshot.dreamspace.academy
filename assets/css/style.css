@@ -353,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 50px;
   font-size: 24px;
 }
-#hero .btn-get-started {
+.btn-get-started {
   font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -366,8 +366,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   background: #0688BB;
 }
-#hero .btn-get-started:hover {
+.btn-get-started:hover {
   background: #209dd8;
+  color: #fff;
 }
 #hero .btn-watch-video {
   font-size: 16px;
