@@ -1044,7 +1044,7 @@ section.contact-us #contact button:hover {
   margin: auto; /* 15% from the top and centered */
   padding: 0;
   border: 0px;
-  width: 60%; /* Could be more or less, depending on screen size */
+  width: 90%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
