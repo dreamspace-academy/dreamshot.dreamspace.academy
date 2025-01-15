@@ -952,158 +952,250 @@
 }
 
 /*--------------------------------------------------------------
-# Explore booths showcasing section
+# event-3 hero section
 --------------------------------------------------------------*/
-
-section {
-  padding: 40px 10%;
-  background: #fcf6fd;
-  margin-bottom: 20px;
+.event-3-hero {
+  position: relative;
+  padding-top: 160px;
+  background: url(/events/img-events/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 92vh;
+  padding-bottom: 0;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #350158;
-  font-size: 1.8em;
+@media (max-width: 992px) { /* Tablet size */
+  .event-3-hero {
+      height: 55vh; 
+      padding-top: 120px; 
+  }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+@media (max-width: 768px) { /* iPad Pro portrait size */
+  .event-3-hero {
+      height: 55vh; 
+  }
 }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+@media (max-width: 1366px) and (min-width: 1024px) { /* iPad Pro landscape size */
+  .event-3-hero {
+      height: 55vh; 
+  }
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+@media (max-width: 576px) { /* Mobile size */
+  .event-3-hero {
+      height: 60vh; 
+      padding-top: 100px; 
+  }
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #0044cc;
-  font-size: 1.5em;
+.event-3-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 90% 10%,
+      color-mix(in srgb, var(--accent-color), transparent 92%),
+      transparent 40%
+  );
+  pointer-events: none;
 }
 
-.card p {
-  font-size: 1em;
-  line-height: 1.5;
-  margin-top: 10px;
+.event-3-hero .event-3-hero-content {
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
 }
 
-.cta {
-  text-align: center;
-  margin: 40px 0;
+.event-3-hero .event-3-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
-.cta button {
-  background: #0044cc;
-  color: #fff;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1.2em;
-  transition: background 0.3s ease;
-}
-
-.cta button:hover {
-  background: #0033a1;
-}
-
-footer {
-  background: #333;
-  color: #fff;
-  padding: 20px 10%;
+.centered-heading {
   text-align: center;
 }
 
-footer a {
-  color: #4a90e2;
-  text-decoration: none;
+.event-3-hero .event-3-hero-content h1 .accent-text {
+  color: var(--accent-color);
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-      font-size: 2em;
+@media (max-width: 992px) {
+  .event-3-hero .event-3-hero-content {
+      text-align: center;
+      margin-bottom: 3rem;
   }
 
-  header p {
-      font-size: 1em;
+  .event-3-hero .event-3-hero-content h1 {
+      font-size: 2.5rem;
   }
 
-  .card p {
-      font-size: 0.9em;
-  }
-
-  .cta button {
-      padding: 10px 20px;
-      font-size: 1em;
+  .event-3-hero .event-3-hero-content .event-3-hero-buttons {
+      justify-content: center;
   }
 }
 
-@media (max-width: 480px) {
-  header h1 {
-      font-size: 1.8em;
+@media (max-width: 575px) {
+  .event-3-hero .event-3-hero-content h1 {
+      font-size: 2rem;
   }
 
-  header p {
-      font-size: 0.9em;
-  }
-
-  .section-title {
-      font-size: 1.5em;
+  .event-3-hero .event-3-hero-content {
+      margin-top: 80px;
   }
 }
 
-.card-icon {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; 
+
+.event-3-hero {
+  position: relative;
+  padding-top: 160px;
+  background: url(/events/img-events/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 92vh;
+  padding-bottom: 0;
 }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center; 
+@media (max-width: 992px) { /* Tablet size */
+  .event-3-hero {
+      height: 55vh; 
+      padding-top: 120px; 
+  }
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+@media (max-width: 768px) { /* iPad Pro portrait size */
+  .event-3-hero {
+      height: 55vh; 
+  }
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #350158;
-  font-size: 1.2em;
+@media (max-width: 1366px) and (min-width: 1024px) { /* iPad Pro landscape size */
+  .event-3-hero {
+      height: 55vh; 
+  }
 }
 
-.card p {
-  font-size: 1em;
-  line-height: 1.5;
-  margin-top: 10px;
+@media (max-width: 576px) { /* Mobile size */
+  .event-3-hero {
+      height: 60vh; 
+      padding-top: 100px; 
+  }
+}
+
+.event-3-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 90% 10%,
+      color-mix(in srgb, var(--accent-color), transparent 92%),
+      transparent 40%
+  );
+  pointer-events: none;
+}
+
+.event-3-hero .event-3-hero-content {
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+.event-3-hero .event-3-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.centered-heading {
+  text-align: center;
+}
+
+.event-3-hero .event-3-hero-content h1 .accent-text {
+  color: var(--accent-color);
+}
+
+@media (max-width: 992px) {
+  .event-3-hero .event-3-hero-content {
+      text-align: center;
+      margin-bottom: 3rem;
+  }
+
+  .event-3-hero .event-3-hero-content h1 {
+      font-size: 2.5rem;
+  }
+
+  .event-3-hero .event-3-hero-content .event-3-hero-buttons {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .event-3-hero .event-3-hero-content h1 {
+      font-size: 2rem;
+  }
+
+  .event-3-hero .event-3-hero-content {
+      margin-top: 80px;
+  }
 }
 
 /*--------------------------------------------------------------
-#Live Demonstrations section
+#event-3 Sub-navbar
 --------------------------------------------------------------*/
+.sub-nav {
+  text-align: center;
+  background: rgb(23, 24, 57);
+  padding: 0.5rem 0;
+}
+
+.sub-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  font-size: 0.7rem; /* Default font size */
+}
+
+/* Hover effect for links */
+.sub-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles for tablets (768px and above) */
+@media (min-width: 768px) {
+  .sub-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles for larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .sub-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles for smaller screens (below 768px) */
+@media (max-width: 767px) {
+  .sub-nav {
+    padding: 1rem 0;
+  }
+  .sub-nav a {
+    font-size: 0.7rem;
+    margin: 0 0.5rem;
+  }
+}
+
 
