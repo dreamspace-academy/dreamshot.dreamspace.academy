@@ -2,164 +2,561 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>DreamShot</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>DreamShot</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
-    integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
-    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+        integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+        crossorigin="anonymous"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/src/flipdown.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/src/flipdown.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/img/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="/events/event.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="/events/event.css" rel="stylesheet">
 
 
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div
+            class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">DreamShot</h1>
-      </a>
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">DreamShot</h1>
+            </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="/index.html" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <!-- <li><a href="#features">Features</a></li> -->
-          <!-- <li><a href="#services">Services</a></li> -->
-          <!-- <li><a href="#pricing">Pricing</a></li> -->
-          <li class="dropdown"><a href="#events"><span>Events</span> <i
-                class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Frontline Innovation</a></li>
-              <li><a href="#">Inspiring Entrepreneurship</a></li>
-              <li><a href="#">Creativepreneurs For Artists</a></li>
-              <li><a href="#">Reimagining Education</a></li>
-              <li><a href="#">Tech for Social AI for Good</a></li>
-              <li><a href="#">Poster Presentations Research & Ideas</a></li>
-              <li><a href="#">Short Talks and Panel Discussions</a></li>
-              <li><a href="#">Hackathons, Pitching Events, and Mentoring Sessions</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/index.html" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#features">Features</a></li> -->
+                    <!-- <li><a href="#services">Services</a></li> -->
+                    <!-- <li><a href="#pricing">Pricing</a></li> -->
+                    <li class="dropdown"><a href="#events"><span>Events</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#">Frontline Innovation</a></li>
+                            <li><a href="#">Inspiring Entrepreneurship</a></li>
+                            <li><a href="#">Creativepreneurs For Artists</a></li>
+                            <li><a href="#">Reimagining Education</a></li>
+                            <li><a href="#">Tech for Social AI for Good</a></li>
+                            <li><a href="#">Poster Presentations Research & Ideas</a></li>
+                            <li><a href="#">Short Talks and Panel Discussions</a></li>
+                            <li><a href="#">Hackathons, Pitching Events, and Mentoring Sessions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Join Us</a>
+            <a class="btn-getstarted" href="index.html#about">Join Us</a>
 
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- <img src="/assets/img/arrow.png" alt="Traveling Image" class="traveling-image"> -->
-
-    <!-- Hero Section -->
-    <section id="event-3-hero" class="hero section">
-      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-              <h1 style="color: aliceblue; font-size: 4rem;">
-                Our Approach
-              </h1>
-              <p class="mb-4 mb-md-5 typewriter" style="color: aliceblue; font-size: 1.7rem;">
-                Empowering <span class="text" style="color: #ed8bff;">Innovation</span>
-              </p>
-
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- /Hero Section -->
+    <main class="main">
 
-    <!-- Sub navbar -->
-    <nav class="sub-nav">
-        <a href="#film-screenings">Film Screenings</a>
-        <a href="#music-workshops">Music Workshops</a>
-        <a href="#storytelling-workshops">Storytelling Workshops</a>
-        <a href="#business-roundtable">Business Roundtable</a>
-        <a href="#live-performances">Live Performances</a>
-    </nav>
-    <!-- / Sub navbar -->
-  </main>
+        <!-- <img src="/assets/img/arrow.png" alt="Traveling Image" class="traveling-image"> -->
 
-  <footer id="footer" class="footer">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                            <h1 style="color: aliceblue; font-size: 4rem;">
+                                Inspiring Innovators
+                            </h1>
+                            <p class="mb-4 mb-md-5 typewriter" style="color: aliceblue; font-size: 1.7rem;">
+                                Empowering <span class="text" style="color: #ed8bff;">Innovation</span>
+                            </p>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">DreamSpace Academy</strong> <span>All Rights
-          Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="https://dreamspace.academy/">DreamSpace Technologies</a>
-      </div>
-    </div>
+        <!-- /Hero Section -->
 
-  </footer>
+        <!-- Sub navbar -->
+        <!-- <nav class="sub-nav">
+            <a href="#film-screenings">Film Screenings</a>
+            <a href="#music-workshops">Music Workshops</a>
+            <a href="#storytelling-workshops">Storytelling Workshops</a>
+            <a href="#business-roundtable">Business Roundtable</a>
+            <a href="#live-performances">Live Performances</a>
+        </nav> -->
+        <!-- About Section -->
+        <section id="music-workshops" class="music-workshops section">
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-  <!-- Vendor JS Files -->
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+                <div class="row gy-4 align-items-center justify-content-between">
 
-  <!-- Main JS File -->
-  <script src="/assets/js/main.js"></script>
+                    <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+                        <h1><span class="music-workshops-meta"> Film Screenings & Discussions </span></h1>
+                        <!-- <h2 class="music-workshops-title">Do Things Right</h2> -->
+                        <p class="music-workshops-description"> Immerse yourself in thought-provoking cinema and engage
+                            in in-depth discussions with renowned filmmakers at the Film Screenings & Discussions
+                            segment of the Creativepreneurs Festival. This is your chance to explore unique narratives,
+                            learn from industry experts, and gain insights into the creative process behind impactful
+                            films.</p>
+
+                        <div class="row feature-list-wrapper">
+                            <div class="col-md-6">
+                                <ul class="feature-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Munnel by Visakesa Chandrasekaram</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Tentigo by Ilango Ram & Hiranya Ram</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Demon in Paradise by Jude Ratnam</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <ul class="feature-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Youth-Led Innovations</li>
+                                    <li><i class="bi bi-check-circle-fill"></i>Cultural Fusion Hackathon </li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Educator Training</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="image-wrapper">
+                            <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                                <img src="/events/img-events/event4pic3.jpg" alt="Business Meeting"
+                                    class="img-fluid main-image rounded-4">
+                                <img src="/events/img-events/image4-2.jpg" alt="Team Discussion"
+                                    class="img-fluid small-image rounded-4">
+                            </div>
+                            <!-- <div class="experience-badge floating"> -->
+                            <!-- <h3>2500+ </h3> -->
+                            <!-- <p class="mt-4">Participants</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+        <!-- Film Screenings & Discussions Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="row g-4 justify-content-center">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/image-4.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Munnel by Visakesa Chandrasekaram </h4>
+                                <p>Q&A on storytelling and creative challenges</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image4-2.jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Join Visakesa Chandrasekaram for an engaging Q&A session where he delves into the
+                                    complexities of storytelling in filmmaking. Gain a deeper understanding of the
+                                    creative challenges filmmakers face when bringing a story to life on screen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/event4pic5.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4"> Tentigo by Ilango Ram & Hiranya Ram</h4>
+                                <p> Insights into creative processes and inspiration </p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/event4pic3.jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Discover the creative journey behind Tentigo as Ilango Ram and Hiranya Ram share the
+                                    inspirations, challenges, and processes involved in creating their cinematic
+                                    masterpiece. Learn how they translate ideas into visual storytelling.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/event4pic4.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Demon in Paradise by Jude Ratnam</h4>
+                                <p>A documentary exploring Sri Lankan history and reconciliation</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/event4card1pic2.jpg"
+                                        class="img-fluid rounded-top w-100" alt="">
+                                </div>
+                                <p>Experience Demon in Paradise, a powerful documentary by Jude Ratnam that takes an intimate look at Sri Lanka's tumultuous past and the ongoing journey toward reconciliation. Gain new perspectives on Sri Lankan history and the art of documentary filmmaking.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <!-- <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/Live Demonstrations.png"
+                                    class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Youth-Led Innovations</h4>
+                                <p>Youth-led innovations focus on reimagining education through affordable DIY teaching
+                                    aids, inclusive technology, and assistive tools for better learning.</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image.png" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+                                <p>Reimagine education with low-cost DIY teaching aids, inclusive tech, and assistive
+                                    tools. Guided by Dr. Chanuki Seresinhe and Ruwindhu Peiris.
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Card 5 -->
+                    <!-- <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/image (7).jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Cultural Fusion Hackathon </h4>
+                                <p>The Cultural Fusion Hackathon blends tradition and innovation, encouraging
+                                    participants to design educational tools like gamified STEM games.</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image (5).jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Design educational tools blending tradition and innovation, like gamified board games
+                                    for STEM learning. Featuring Dr. Gihan Dias and Sanjeev Jha.</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Card 6 -->
+                    <!-- <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/event4card1.jpg" class="img-fluid rounded-top w-100"
+                                    alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Educator Training</h4>
+                                <p>Educator Training focuses on equipping teachers with skills to integrate innovative
+                                    teaching methods while respecting local traditions and cultures.</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image4-2.jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Equip teachers to integrate maker education while honoring local traditions with Dr.
+                                    Harsha Alles (Gateway Group) and Shyamala Gomez (inclusive education advocate)</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Film Screenings & Discussions End -->
+
+        <!-- Music & Sound Workshops Start -->
+        <section id="music-workshops" class="music-workshops section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4 align-items-center justify-content-between">
+
+                    <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+                        <h1><span class="music-workshops-meta"> 
+                            Music & Sound Workshops </span></h1>
+                        <!-- <h2 class="music-workshops-title">Do Things Right</h2> -->
+                        <p class="music-workshops-description"> Dive into the transformative world of music and sound with a series of immersive workshops designed to inspire and educate. Whether you're a seasoned musician or a curious beginner, these sessions offer something for everyone</p>
+
+                        <div class="row feature-list-wrapper">
+                            <div class="col-md-6">
+                                <ul class="feature-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Songwriting & Hip-Hop Workshop</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Music Production & Cultural Discussion</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Sound Therapy Session</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <ul class="feature-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Youth-Led Innovations</li>
+                                    <li><i class="bi bi-check-circle-fill"></i>Cultural Fusion Hackathon </li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Educator Training</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="image-wrapper">
+                            <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                                <img src="/events/img-events/event4pic3.jpg" alt="Business Meeting"
+                                    class="img-fluid main-image rounded-4">
+                                <img src="/events/img-events/image4-2.jpg" alt="Team Discussion"
+                                    class="img-fluid small-image rounded-4">
+                            </div>
+                            <!-- <div class="experience-badge floating"> -->
+                            <!-- <h3>2500+ </h3> -->
+                            <!-- <p class="mt-4">Participants</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+        
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="row g-4 justify-content-center">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/image-4.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Songwriting & Hip-Hop Workshop</h4>
+                                <p>Navz-47 & Kaber Vasuki</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image4-2.jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Discover the art of crafting powerful lyrics and melodies in this interactive workshop. With a special focus on Hip-Hop, Navz-47 and Kaber Vasuki will share their unique approaches to songwriting, helping you turn emotions and stories into compelling music.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/event4pic5.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4"> Music Production & Cultural Discussion</h4>
+                                <p>Imaad Majeed </p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/event4pic3.jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Learn cutting-edge music production techniques while exploring how cultural traditions influence modern sounds. Imaad Majeed will guide participants through blending technology and heritage to create innovative and meaningful music.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/event4pic4.jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Sound Therapy Session</h4>
+                                <p>Rachel Chanmugam</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/event4card1pic2.jpg"
+                                        class="img-fluid rounded-top w-100" alt="">
+                                </div>
+                                <p>Experience the healing potential of sound in this therapeutic workshop. Rachel Chanmugam will introduce you to the science and practice of sound therapy, demonstrating how frequencies and vibrations can be used to relax, rejuvenate, and balance the mind and body.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <!-- <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/Live Demonstrations.png"
+                                    class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Youth-Led Innovations</h4>
+                                <p>Youth-led innovations focus on reimagining education through affordable DIY teaching
+                                    aids, inclusive technology, and assistive tools for better learning.</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image.png" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+                                <p>Reimagine education with low-cost DIY teaching aids, inclusive tech, and assistive
+                                    tools. Guided by Dr. Chanuki Seresinhe and Ruwindhu Peiris.
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Card 5 -->
+                    <!-- <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/image (7).jpg" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Cultural Fusion Hackathon </h4>
+                                <p>The Cultural Fusion Hackathon blends tradition and innovation, encouraging
+                                    participants to design educational tools like gamified STEM games.</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image (5).jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Design educational tools blending tradition and innovation, like gamified board games
+                                    for STEM learning. Featuring Dr. Gihan Dias and Sanjeev Jha.</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Card 6 -->
+                    <!-- <div class="col-md-4">
+                        <div class="service-item rounded">
+                            <div class="service-img rounded-top">
+                                <img src="/events/img-events/event4card1.jpg" class="img-fluid rounded-top w-100"
+                                    alt="">
+                            </div>
+                            <div class="service-content rounded-bottom bg-light p-4">
+                                <h4 class="mb-4">Educator Training</h4>
+                                <p>Educator Training focuses on equipping teachers with skills to integrate innovative
+                                    teaching methods while respecting local traditions and cultures.</p>
+                            </div>
+                            <div class="popup-details">
+                                <h6></h6>
+                                <div class="service-img rounded-top">
+                                    <img src="/events/img-events/image4-2.jpg" class="img-fluid rounded-top w-100"
+                                        alt="">
+                                </div>
+                                <p>Equip teachers to integrate maker education while honoring local traditions with Dr.
+                                    Harsha Alles (Gateway Group) and Shyamala Gomez (inclusive education advocate)</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Music & Sound Workshops End -->
+        
+    </main>
+
+    <footer id="footer" class="footer">
+
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">DreamSpace Academy</strong> <span>All Rights
+                    Reserved</span></p>
+            <div class="credits">
+                Designed by <a href="https://dreamspace.academy/">DreamSpace Technologies</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="/assets/js/main.js"></script>
 
 
 </body>
