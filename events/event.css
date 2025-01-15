@@ -1159,13 +1159,43 @@
   background: rgb(23, 24, 57);
   padding: 0.5rem 0;
 }
+
 .sub-nav a {
   color: #fff;
   text-decoration: none;
   margin: 0 1rem;
   font-weight: bold;
+  font-size: 0.7rem; /* Default font size */
 }
+
+/* Hover effect for links */
 .sub-nav a:hover {
   text-decoration: underline;
 }
+
+/* Responsive styles for tablets (768px and above) */
+@media (min-width: 768px) {
+  .sub-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles for larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .sub-nav a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles for smaller screens (below 768px) */
+@media (max-width: 767px) {
+  .sub-nav {
+    padding: 1rem 0;
+  }
+  .sub-nav a {
+    font-size: 0.7rem;
+    margin: 0 0.5rem;
+  }
+}
+
 
