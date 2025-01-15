@@ -1105,24 +1105,31 @@ footer a:hover {
 
 /*--------------------------------------------------------------
 #Live Demonstrations section
---------------------------------------------------------------*/
+
+
+
+/* Ensure all cards are the same height */
 .service-item {
     position: relative;
     overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease-in-out;
-}
-
-.service-item:hover {
-    transform: scale(1.05);
-}
-
-.service-item .popup-details {
+  }
+  
+  .service-item .service-content {
+    flex-grow: 1;
+  }
+  
+  /* Adjust content size */
+  .service-item .popup-details {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(57, 19, 99, 0.9); /* Updated with #391363 color */
+    background: rgba(57, 19, 99, 0.9);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -1133,20 +1140,27 @@ footer a:hover {
     text-align: center;
     padding: 20px;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.service-item:hover .popup-details {
+  }
+  
+  .service-item:hover .popup-details {
     opacity: 1;
     visibility: visible;
-}
-
-.service-img img {
+  }
+  
+  /* Image inside cards */
+  .service-img img {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-}
-
-/* Additional customization for button hover color (if applicable) */
-.service-item:hover .service-content {
-    background-color: #391363; /* Apply #391363 as hover effect */
+  }
+  
+  /* Card hover effect */
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Optional: Customize hover effect for content */
+  .service-item:hover .service-content {
+    background-color: #391363;
     color: #fff;
-}
+  }
+  
