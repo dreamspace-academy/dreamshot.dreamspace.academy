@@ -656,13 +656,13 @@
   }
   
   /*--------------------------------------------------------------
-  # Hero Section
+  # event-1 Hero Section
   --------------------------------------------------------------*/
   /* Hero Section */
 .hero {
   position: relative;
   padding-top: 160px;
-  background: url(/events/img-events/banner.jpg);
+  background: url(img-events/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
