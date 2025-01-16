@@ -1164,3 +1164,99 @@ footer a:hover {
     color: #fff;
   }
   
+
+
+  
+/*--------------------------------------------------------------
+# event4 Section
+--------------------------------------------------------------*/
+.event4 .nav-tabs {
+  border: 0;
+}
+
+.event4 .nav-link {
+  background-color: var(--surface-color);
+  color: var(--heading-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 15px 20px;
+  transition: 0.3s;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.event4 .nav-link i {
+  padding-right: 15px;
+  font-size: 48px;
+}
+
+.event4 .nav-link h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.event4 .nav-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.event4 .nav-link.active {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
+.event4 .nav-link.active h4 {
+  color: var(--contrast-color);
+}
+
+@media (max-width: 768px) {
+  .event4 .nav-link i {
+    padding: 0;
+    line-height: 1;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .event4 .nav-link {
+    padding: 15px;
+  }
+
+  .event4 .nav-link i {
+    font-size: 24px;
+  }
+}
+
+.event4 .tab-content {
+  margin-top: 30px;
+}
+
+.event4 .tab-pane h3 {
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.event4 .tab-pane ul {
+  list-style: none;
+  padding: 0;
+}
+
+.event4 .tab-pane ul li {
+  padding-bottom: 10px;
+}
+
+.event4 .tab-pane ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--accent-color);
+}
+
+.event4 .tab-pane p:last-child {
+  margin-bottom: 0;
+}
