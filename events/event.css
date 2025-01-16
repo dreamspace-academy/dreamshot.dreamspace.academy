@@ -941,8 +941,8 @@ footer a:hover {
 /*--------------------------------------------------------------
 # Live Demonstrations Section
 --------------------------------------------------------------*/
-.Demonstrations {
-  /* No specific styles found for .Demonstrations class */
+.about {
+  /* No specific styles found for .about class */
 }
 
 .container-fluid {
@@ -1121,6 +1121,21 @@ footer a:hover {
   padding-right: 0 !important;
 }
 
+ /*--------------------------------------------------------------
+# Awards
+--------------------------------------------------------------*/
+.img-twice::before {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 80%;
+  top: 10%;
+  left: 20%;
+  background: #350158;
+  border: 25px solid white;
+  border-radius: 6px;
+  z-index: -1;
+}
 
   /*--------------------------------------------------------------
 # About Section
