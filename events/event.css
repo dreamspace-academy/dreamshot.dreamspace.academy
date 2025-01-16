@@ -656,106 +656,151 @@
   }
   
   /*--------------------------------------------------------------
-  # event-1 Hero Section
+  # Inovation Hero Section
   --------------------------------------------------------------*/
-  /* Hero Section */
-.event-1-hero-section {
-  position: relative;
-  padding-top: 160px;
-  background: url(img-events/banner.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  .carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background: #350158;
+    z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3.5rem;
+    /* background-color: var(--dark); */
+    border: 15px solid var(--dark);
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.page-header {
+  /* background: linear-gradient(#350158, #701fcf), url(img-events/banner.jpg) center center no-repeat; */
   background-size: cover;
-  height: 92vh;
-  padding-bottom: 0;
+  background-image: url(img-events/banner-2.jpg);
+  height: 400px; /* Increase height as needed */
+  min-height: 400px; /* Ensures it won't shrink below this value */
 }
 
-@media (max-width: 992px) { /* Tablet size */
-  .event-1-hero-section {
-      height: 55vh; 
-      padding-top: 120px; 
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+  color: white;
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+  font-size: 18px;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .page-header {
+    height: 300px; /* Adjust height for tablet screens */
+    min-height: 300px;
   }
 }
 
-@media (max-width: 768px) { /* iPad Pro portrait size */
-  .event-1-hero-section {
-      height: 55vh; 
+@media (max-width: 480px) {
+  .page-header {
+    height: 250px; /* Adjust height for smaller mobile screens */
+    min-height: 250px;
   }
 }
 
-@media (max-width: 1366px) and (min-width: 1024px) { /* iPad Pro landscape size */
-  .event-1-hero-section {
-      height: 55vh; 
-  }
-}
 
-@media (max-width: 576px) { /* Mobile size */
-  .event-1-hero-section {
-      height: 60vh; 
-      padding-top: 100px; 
-  }
-}
-
-.event-1-hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-      circle at 90% 10%,
-      color-mix(in srgb, var(--accent-color), transparent 92%),
-      transparent 40%
-  );
-  pointer-events: none;
-}
-
-.event-1-hero-section .event-1-hero-section-content {
+/*--------------------------------------------------------------
+# Main Title
+--------------------------------------------------------------*/
+.section-title {
   position: relative;
-  z-index: 1;
-  margin-top: 100px;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  text-align: center; /* Center the text content */
 }
 
-.event-1-hero-section .event-1-hero-section-content h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the line horizontally */
+  background: #350158;
 }
 
-.centered-heading {
-  text-align: center;
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the circle horizontally */
+  background: #701fcf;
+  border: 5px solid #FFFFFF;
+  border-radius: 50%;
 }
 
-.event-1-hero-section .event-1-hero-section-content h1 .accent-text {
-  color: var(--accent-color);
-}
-
-@media (max-width: 992px) {
-  .event-1-hero-section .event-1-hero-section-content {
-      text-align: center;
-      margin-bottom: 3rem;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
 
-  .event-1-hero-section .event-1-hero-section-content h1 {
-      font-size: 2.5rem;
+  .section-title::before {
+    width: 40%; /* Slightly smaller line for smaller screens */
   }
 
-  .event-1-hero-section .event-1-hero-section-content .event-1-hero-section-buttons {
-      justify-content: center;
+  .section-title::after {
+    width: 14px; /* Slightly smaller circle */
+    height: 14px;
+    bottom: -6px;
   }
 }
 
-@media (max-width: 575px) {
-  .event-1-hero-section .event-1-hero-section-content h1 {
-      font-size: 2rem;
+@media (max-width: 480px) {
+  .section-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 
-  .event-1-hero-section .event-1-hero-section-content {
-      margin-top: 80px;
+  .section-title::before {
+    width: 35%; /* Further reduce the line width */
+  }
+
+  .section-title::after {
+    width: 12px; /* Further reduce the circle size */
+    height: 12px;
+    bottom: -5px;
   }
 }
+
+
 
   /*--------------------------------------------------------------
 # About Section
