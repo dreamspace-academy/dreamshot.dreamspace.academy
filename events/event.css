@@ -656,7 +656,7 @@
   }
   
   /*--------------------------------------------------------------
-  # event-1 Hero Section
+  # Inovation Hero Section
   --------------------------------------------------------------*/
   .carousel-caption {
     top: 0;
@@ -698,20 +698,109 @@
 }
 
 .page-header {
-    /* background: linear-gradient(#350158, #701fcf), url(img-events/banner.jpg) center center no-repeat; */
-    background-size: cover;
-    background-image: url(img-events/banner-2.jpg);
+  /* background: linear-gradient(#350158, #701fcf), url(img-events/banner.jpg) center center no-repeat; */
+  background-size: cover;
+  background-image: url(img-events/banner-2.jpg);
+  height: 400px; /* Increase height as needed */
+  min-height: 400px; /* Ensures it won't shrink below this value */
 }
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: white;
+  color: white;
 }
 
 .page-header .breadcrumb-item,
 .page-header .breadcrumb-item a {
-    font-size: 18px;
-    color: white;
+  font-size: 18px;
+  color: white;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .page-header {
+    height: 300px; /* Adjust height for tablet screens */
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    height: 250px; /* Adjust height for smaller mobile screens */
+    min-height: 250px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Main Title
+--------------------------------------------------------------*/
+.section-title {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  text-align: center; /* Center the text content */
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the line horizontally */
+  background: #350158;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the circle horizontally */
+  background: #701fcf;
+  border: 5px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .section-title::before {
+    width: 40%; /* Slightly smaller line for smaller screens */
+  }
+
+  .section-title::after {
+    width: 14px; /* Slightly smaller circle */
+    height: 14px;
+    bottom: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .section-title::before {
+    width: 35%; /* Further reduce the line width */
+  }
+
+  .section-title::after {
+    width: 12px; /* Further reduce the circle size */
+    height: 12px;
+    bottom: -5px;
+  }
+}
+
+
 
   /*--------------------------------------------------------------
 # About Section
