@@ -1698,6 +1698,370 @@ footer a:hover {
 }
 
 /*--------------------------------------------------------------
+<<<<<<< HEAD
+# Explore booths showcasing section
+--------------------------------------------------------------*/
+
+section {
+  padding: 40px 10%;
+  background: #fcf6fd;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #350158;
+  font-size: 1.8em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #0044cc;
+  font-size: 1.5em;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.cta {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta button {
+  background: #0044cc;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s ease;
+}
+
+.cta button:hover {
+  background: #0033a1;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 10%;
+  text-align: center;
+}
+
+footer a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2em;
+  }
+
+  header p {
+      font-size: 1em;
+  }
+
+  .card p {
+      font-size: 0.9em;
+  }
+
+  .cta button {
+      padding: 10px 20px;
+      font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.8em;
+  }
+
+  header p {
+      font-size: 0.9em;
+  }
+
+  .section-title {
+      font-size: 1.5em;
+  }
+}
+
+.card-icon {
+  width: 40px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; 
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #350158;
+  font-size: 1.2em;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+/* 
+
+
+
+
+
+/* event4 start */
+
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+.event4-about-section{
+  margin-top: 10%;
+}
+
+.event4-about-section .about-description{
+  text-align:justify;
+}
+
+.event4-about-section.about-meta {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.event4-about-section.about-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .event4-about-section .event4-about-section-title {
+    font-size: 2rem;
+  }
+}
+
+.event4-about-section .event4-about-section-description {
+  margin-bottom: 2rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.event4-about-section .feature-list-wrapper {
+  margin-bottom: 2rem;
+}
+
+.event4-about-section .feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event4-about-section .feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.event4-about-section .feature-list li i {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+.event4-about-section .profile .profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.event4-about-section .profile .profile-name {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.event4-about-section .profile .profile-position {
+  color: var(--accent-color);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.event4-about-section .contact-info {
+  padding: 1rem 1.5rem;
+  background-color: var(--surface-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+}
+
+.event4-about-section .contact-info i {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.event4-about-section .contact-info .contact-label {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.event4-about-section .contact-info .contact-number {
+  font-weight: 600;
+  margin: 0;
+}
+
+.event4-about-section .image-wrapper {
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .event4-about-section .image-wrapper {
+    padding-left: 0;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .event4-about-section .image-wrapper .images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .event4-about-section .image-wrapper .main-image {
+    margin-left: 0;
+  }
+}
+
+.event4-about-section .image-wrapper .small-image {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 45%;
+  border: 8px solid var(--surface-color);
+}
+
+@media (max-width: 992px) {
+  .event4-about-section .image-wrapper .small-image {
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+  }
+}
+
+.event4-about-section .image-wrapper .experience-badge {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  min-width: 200px;
+  animation: experience-float 3s ease-in-out infinite;
+}
+
+@media (max-width: 992px) {
+  .event4-about-section .image-wrapper .experience-badge {
+    position: static;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.event4-about-section .image-wrapper .experience-badge h3 {
+  color: var(--contrast-color);
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 0.5;
+}
+
+.event4-about-section .image-wrapper .experience-badge h3 span {
+  font-size: 1rem;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+.event4-about-section .image-wrapper .experience-badge p {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+}
+
+@keyframes experience-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+=======
+>>>>>>> ba745f627d29c6595cd4147f078214a51ea37472
 #Live Demonstrations section
 --------------------------------------------------------------*/
 .service-item {
@@ -1753,6 +2117,4 @@ footer a:hover {
 .service-item:hover .service-content {
   background-color: #391363;
   color: #fff;
-}
-
-
+} 
