@@ -2018,6 +2018,8 @@ footer a:hover {
 .service-item:hover .popup-details {
   opacity: 1;
   visibility: visible;
+  
+
 }
 
 /* Image inside cards */
@@ -2036,3 +2038,50 @@ footer a:hover {
   background-color: #391363;
   color: #fff;
 } 
+
+.popup-details{
+  margin-top: 5%;
+}
+
+
+/* event5  */
+/*--------------------------------------------------------------
+# Custom Section Title
+--------------------------------------------------------------*/
+
+.custom-section-title {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  margin-top: 10%;    
+}
+
+.custom-section-title::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary);
+}
+
+.custom-section-title::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 28px;
+  bottom: -13px;
+  left: calc(25% - 13px);
+  background: var(--dark);
+  border: 10px solid #FFFFFF;
+  border-radius: 28px;
+}
+
+.custom-section-title.text-center::before {
+  left: 25%;
+}
+
+.custom-section-title.text-center::after {
+  left: calc(50% - 13px);
+}
