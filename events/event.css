@@ -1702,8 +1702,7 @@ footer a:hover {
 } */
 
 /*--------------------------------------------------------------
-<<<<<<< HEAD
-# Explore booths showcasing section
+/* Explore booths showcasing section
 --------------------------------------------------------------*/
 
 section {
@@ -1853,25 +1852,19 @@ footer a:hover {
   line-height: 1.5;
   margin-top: 10px;
 }
-/* 
-
-
-
-
 
 /* event4 start */
-
 
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 
-.event4-about-section{
+.event4-about-section {
   margin-top: 6.5%;
 }
 
-.event4-about-section .about-description{
-  text-align:justify;
+.event4-about-section .about-description {
+  text-align: justify;
 }
 
 .event4-about-section.about-meta {
@@ -2060,12 +2053,6 @@ footer a:hover {
     transform: translateY(0);
   }
 }
-
-
-
-/*--------------------------------------------------------------
-=======
->>>>>>> ba745f627d29c6595cd4147f078214a51ea37472
 #Live Demonstrations section
 --------------------------------------------------------------*/
 .service-item {
@@ -2124,8 +2111,6 @@ footer a:hover {
   background-color: #391363;
   color: #fff;
 } 
-
-<<<<<<< HEAD
 /* Interactive Startup Stalls Styles */
 .interactive-stalls .stall-item {
   background-color: var(--surface-color);
@@ -2238,11 +2223,11 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center; /* Vertically align the image */
-=======
-.popup-details{
-  margin-top: 5%;
 }
 
+.popup-details {
+  margin-top: 5%;
+}
 
 /* event5  */
 /*--------------------------------------------------------------
@@ -2253,7 +2238,7 @@ footer a:hover {
   position: relative;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  margin-top: 10%;    
+  margin-top: 10%;
 }
 
 .custom-section-title::before {
@@ -2284,8 +2269,8 @@ footer a:hover {
 
 .custom-section-title.text-center::after {
   left: calc(50% - 13px);
->>>>>>> 37730cf9124be9f60865e9e5e33bd0ddad8059ca
 }
+
 
 /*--------------------------------------------------------------
 # Poster presentation page
