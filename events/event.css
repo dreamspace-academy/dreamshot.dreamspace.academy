@@ -1132,9 +1132,91 @@ footer a:hover {
   top: 10%;
   left: 20%;
   background: #350158;
-  border: 25px solid white;
+  border: 25px solid #f5eef9;
   border-radius: 6px;
   z-index: -1;
+}
+
+/*--------------------------------------------------------------
+# Creativepreneurs Page
+--------------------------------------------------------------*/
+/*** Blog Start ***/
+.blog .blog-item {
+  height: 100%;
+  background: var(--bs-light);
+}
+
+.blog .blog-item .blog-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog .blog-item .blog-img::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: rgba(112, 31, 207, 0.3);
+  transition: 0.5s;
+}
+
+.blog .blog-item:hover .blog-img::after {
+  width: 100%;
+  height: 100%;
+}
+
+.blog .blog-item .blog-img img {
+  transition: 0.5s;
+}
+
+.blog .blog-item:hover .blog-img img {
+  transform: scale(1.2);
+}
+
+.blog .blog-item .blog-heading {
+  position: relative;
+  background: var(--bs-white);
+}
+
+.blog .blog-item .blog-heading a.h4 {
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.blog .blog-item .blog-heading::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.blog .blog-item:hover .blog-heading::after {
+  width: 100%;
+  background: #350158;
+}
+
+.blog .blog-item:hover .blog-heading a.h4 {
+  color: var(--bs-white);
+}
+
+.blog .blog-item:hover .blog-heading a.h4:hover {
+  color: var(--bs-dark);
+}
+
+.stories .h6{
+  font-size: 0.5rem;
+  font-weight: 200;
+  
 }
 
   /*--------------------------------------------------------------
@@ -1615,6 +1697,10 @@ footer a:hover {
   }
 }
 
+/* .Creativepreneurs{
+  margin-top: ;
+} */
+
 /*--------------------------------------------------------------
 <<<<<<< HEAD
 # Explore booths showcasing section
@@ -2018,6 +2104,8 @@ footer a:hover {
 .service-item:hover .popup-details {
   opacity: 1;
   visibility: visible;
+  
+
 }
 
 /* Image inside cards */
@@ -2037,6 +2125,7 @@ footer a:hover {
   color: #fff;
 } 
 
+<<<<<<< HEAD
 /* Interactive Startup Stalls Styles */
 .interactive-stalls .stall-item {
   background-color: var(--surface-color);
@@ -2149,4 +2238,51 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center; /* Vertically align the image */
+=======
+.popup-details{
+  margin-top: 5%;
+}
+
+
+/* event5  */
+/*--------------------------------------------------------------
+# Custom Section Title
+--------------------------------------------------------------*/
+
+.custom-section-title {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  margin-top: 10%;    
+}
+
+.custom-section-title::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary);
+}
+
+.custom-section-title::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 28px;
+  bottom: -13px;
+  left: calc(25% - 13px);
+  background: var(--dark);
+  border: 10px solid #FFFFFF;
+  border-radius: 28px;
+}
+
+.custom-section-title.text-center::before {
+  left: 25%;
+}
+
+.custom-section-title.text-center::after {
+  left: calc(50% - 13px);
+>>>>>>> 37730cf9124be9f60865e9e5e33bd0ddad8059ca
 }
