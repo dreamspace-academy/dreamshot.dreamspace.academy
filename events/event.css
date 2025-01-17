@@ -2171,3 +2171,135 @@ footer a:hover {
 .custom-section-title.text-center::after {
   left: calc(50% - 13px);
 }
+
+/*--------------------------------------------------------------
+# Poster presentation page
+--------------------------------------------------------------*/
+.poster-blog {
+  /* padding: 120px 0 90px; */
+  margin-top: 5vh;
+}
+
+.poster-blog-content {
+  margin-top: 80px;
+}
+
+.poster-blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.single-poster-blog-item {
+  box-shadow: 0 0px 5px rgba(71,71,71,.2);
+  transition: .3s;
+}
+
+.single-poster-blog-item-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.single-poster-blog-item-txt {
+  padding: 25px 28px 27px;
+}
+
+.single-poster-blog-item-txt h2 a {
+  text-transform: initial;
+  line-height: 1.8;
+  color: #350158; /* Changed color */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.single-poster-blog-item-txt h4 {
+  font-size: 14px;
+  color: #350158; /* Changed color */
+  font-weight: 400;
+  margin: 12px 0 20px;
+}
+
+.single-poster-blog-item-txt h4 a {
+  font-size: 14px;
+  padding-right: 14px;
+  border-right: 1px solid #350158; /* Changed color */
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #350158; /* Changed color */
+  text-decoration: none;
+}
+
+.single-poster-blog-item:hover h2 a {
+  color: #350158; /* Changed color */
+}
+
+.single-poster-blog-item:hover {
+  box-shadow: 0 10px 20px rgba(21,19,19,.4);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  color: #350158; /* Changed color */
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #350158; /* Changed color */
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .poster-blog-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .poster-blog-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Container responsiveness */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+      max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
+  }
+}
