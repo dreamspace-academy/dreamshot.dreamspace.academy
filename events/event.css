@@ -1867,7 +1867,7 @@ footer a:hover {
 --------------------------------------------------------------*/
 
 .event4-about-section{
-  margin-top: 10%;
+  margin-top: 6.5%;
 }
 
 .event4-about-section .about-description{
@@ -2125,6 +2125,120 @@ footer a:hover {
   color: #fff;
 } 
 
+<<<<<<< HEAD
+/* Interactive Startup Stalls Styles */
+.interactive-stalls .stall-item {
+  background-color: var(--surface-color);
+  border-radius: 5px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+  height: 300px; /* Set fixed height */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute space between image and content */
+}
+
+.interactive-stalls .stall-img img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+.interactive-stalls .stall-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Let the content section grow */
+}
+
+.interactive-stalls .stall-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.interactive-stalls .stall-info p {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0;
+}
+
+.interactive-stalls-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.interactive-stalls-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.interactive-stalls-title h2:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.interactive-stalls-title p {
+  margin-bottom: 0;
+}
+
+/* New Card Styles for Inspiring Local Entrepreneurs Section */
+.entrepreneur-card {
+  background-color: var(--surface-color);
+  border-radius: 5px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 120px; /* Adjust card height here */
+  margin: 20px;
+}
+
+.entrepreneur-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.entrepreneur-info p {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0;
+  text-align: left;
+}
+
+/* Style for the left image */
+.inspiring-local-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional, add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, adds a soft shadow */
+}
+
+/* Optional: Adjusting the container if needed */
+.col-lg-6.col-md-12.d-flex.justify-content-center {
+  padding: 0; /* Adjust padding if necessary */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically align the image */
+=======
 .popup-details{
   margin-top: 5%;
 }
@@ -2170,6 +2284,7 @@ footer a:hover {
 
 .custom-section-title.text-center::after {
   left: calc(50% - 13px);
+>>>>>>> 37730cf9124be9f60865e9e5e33bd0ddad8059ca
 }
 
 /*--------------------------------------------------------------
