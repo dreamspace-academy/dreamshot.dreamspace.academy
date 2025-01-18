@@ -2470,3 +2470,124 @@ footer a:hover {
   object-fit: contain;
   margin-bottom: 10px;
 }
+/* gallery */
+.gallery .gallery-filters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.gallery .gallery-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 25px;
+  border: 2px solid var(--accent-color); /* Border color */
+  background-color: transparent; /* Transparent background */
+  color: var(--accent-color); /* Text color matches border */
+  transition: all 0.3s ease-in-out;
+  font-family: var(--heading-font);
+}
+
+.gallery .gallery-filters li:hover {
+  background-color: var(--accent-color); /* Solid color on hover */
+  color: #fff; /* White text on hover */
+}
+
+.gallery .gallery-filters li.filter-active {
+  background-color: var(--accent-color); /* Solid background for active button */
+  color: #fff; /* White text for active button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery .gallery-filters li:first-child {
+  margin-left: 0;
+}
+
+.gallery .gallery-filters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .gallery .gallery-filters li {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
+
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px; /* Add margin to the bottom of each item */
+}
+
+.gallery .gallery-item img {
+  width: 100%;
+  height: 300px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.gallery .gallery-item .gallery-info {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better readability */
+  padding: 10px;
+  text-align: center; /* Center the text */
+}
+
+.gallery .gallery-item .gallery-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.gallery .gallery-item .gallery-info p {
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white text */
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.gallery .gallery-item .gallery-info .preview-link,
+.gallery .gallery-item .gallery-info .details-link {
+  position: absolute;
+  right: 50px;
+  font-size: 24px;
+  top: calc(50% - 12px);
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+  transition: 0.3s;
+  line-height: 0;
+}
+
+.gallery .gallery-item .gallery-info .preview-link:hover,
+.gallery .gallery-item .gallery-info .details-link:hover {
+  color: var(--accent-color); /* Accent color on hover */
+}
+
+.gallery .gallery-item .gallery-info .details-link {
+  right: 14px;
+}
+
+.gallery .gallery-item:hover .gallery-info {
+  opacity: 1;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery .gallery-item {
+    margin-bottom: 10px; /* Reduce margin on smaller screens */
+  }
+
+  .gallery .gallery-item img {
+    height: 250px; /* Slightly smaller height on mobile */
+  }
+}
