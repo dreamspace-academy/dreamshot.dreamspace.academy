@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const scrollingContainer = document.querySelector('.scrolling-container');
+  const institutions = document.querySelectorAll('.institution');
+
+  // Clone cards only once to achieve seamless scrolling
+  institutions.forEach(institution => {
+    const clonedInstitution = institution.cloneNode(true);
+    scrollingContainer.appendChild(clonedInstitution);
+  });
+
+  // Optionally, you could also adjust the width of the scrolling container 
+  // to be large enough to accommodate two sets of cards. 
+  // This can be done dynamically based on the number of institutions, if needed.
+
+  // Gallery Filter functionality (same as before)
   const filterButtons = document.querySelectorAll(".gallery-filters li");
   const galleryItems = document.querySelectorAll(".gallery-item");
 
