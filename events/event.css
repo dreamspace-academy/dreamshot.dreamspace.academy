@@ -625,7 +625,7 @@
   /*--------------------------------------------------------------
   # Global Section Titles
   --------------------------------------------------------------*/
-  .section-title {
+  /* .section-title {
     text-align: center;
     padding-bottom: 60px;
     position: relative;
@@ -654,7 +654,7 @@
   
   .section-title p {
     margin-bottom: 0;
-  }
+  } */
   
   /*--------------------------------------------------------------
   # Inovation Hero Section
@@ -739,17 +739,17 @@
   position: relative;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-  text-align: center; /* Center the text content */
+  text-align: center;
 }
 
 .section-title::before {
   position: absolute;
   content: "";
-  width: 50%;
+  width: 200px; /* Fixed width for the underline */
   height: 2px;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%); /* Center the line horizontally */
+  transform: translateX(-50%); 
   background: #350158;
 }
 
@@ -760,13 +760,12 @@
   height: 18px;
   bottom: -8px;
   left: 50%;
-  transform: translateX(-50%); /* Center the circle horizontally */
+  transform: translateX(-50%);
   background: #701fcf;
   border: 5px solid #FFFFFF;
   border-radius: 50%;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .section-title {
     margin-bottom: 2rem;
@@ -774,11 +773,11 @@
   }
 
   .section-title::before {
-    width: 40%; /* Slightly smaller line for smaller screens */
+    width: 150px; /* Adjusted fixed width for smaller screens */
   }
 
   .section-title::after {
-    width: 14px; /* Slightly smaller circle */
+    width: 14px;
     height: 14px;
     bottom: -6px;
   }
@@ -791,31 +790,26 @@
   }
 
   .section-title::before {
-    width: 35%; /* Further reduce the line width */
+    width: 120px; /* Adjusted fixed width for even smaller screens */
   }
 
   .section-title::after {
-    width: 12px; /* Further reduce the circle size */
+    width: 12px; 
     height: 12px;
     bottom: -5px;
   }
 }
 
+
 /*--------------------------------------------------------------
 # Explore booths showcasing section
 --------------------------------------------------------------*/
 
+/* General section styling */
 section {
   padding: 40px 10%;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  background: rgba(255, 255, 255, 0.8);
   margin-bottom: 20px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #350158;
-  font-size: 1.8em;
 }
 
 .grid {
@@ -855,7 +849,7 @@ section {
   width: 40px;
   height: auto;
   display: block;
-  margin: 0 auto 20px; 
+  margin: 0 auto 20px;
 }
 
 .cta {
@@ -894,47 +888,50 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Ensure cards align side by side for iPads */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Media Queries for Responsive Design */
+
+/* For larger iPads (iPad Pro 12.9" & 11") */
+@media (min-width: 1024px) and (max-width: 1366px) {
   .grid {
     grid-template-columns: repeat(3, 1fr); /* 3 cards side by side */
   }
 }
 
-@media (max-width: 768px) {
-  header h1 {
-      font-size: 2em;
-  }
-
-  header p {
-      font-size: 1em;
+/* For regular iPads (768px to 1024px, landscape and portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards side by side */
   }
 
   .card p {
-      font-size: 0.9em;
-  }
-
-  .cta button {
-      padding: 10px 20px;
-      font-size: 1em;
+    font-size: 0.95em;
   }
 }
 
-@media (max-width: 480px) {
-  header h1 {
-      font-size: 1.8em;
-  }
-
-  header p {
-      font-size: 0.9em;
-  }
-
-  .section-title {
-      font-size: 1.5em;
-  }
-
+/* For smaller screens (iPhone, small tablets, or older iPads in portrait mode) */
+@media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* Single column for very small screens */
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  .cta button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+/* For very small screens (phones in portrait mode, <480px) */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .card p {
+    font-size: 0.85em;
   }
 }
 
