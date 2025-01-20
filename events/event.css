@@ -1717,7 +1717,7 @@ section {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Three cards per row */
   gap: 20px;
 }
 
@@ -1728,6 +1728,7 @@ section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
 .card:hover {
@@ -1783,72 +1784,61 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.card-icon {
+  width: 50px; /* Increased icon size */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Three cards side by side */
+  }
+
+  .card {
+    margin: 0 10px;
+  }
+}
+
 @media (max-width: 768px) {
-  header h1 {
-      font-size: 2em;
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Ensure three cards stay side by side on smaller tablets */
   }
 
-  header p {
-      font-size: 1em;
-  }
-
-  .card p {
-      font-size: 0.9em;
+  .card {
+    margin: 0 10px;
   }
 
   .cta button {
-      padding: 10px 20px;
-      font-size: 1em;
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 480px) {
-  header h1 {
-      font-size: 1.8em;
-  }
-
-  header p {
-      font-size: 0.9em;
+  .grid {
+    grid-template-columns: 1fr; /* Stack cards vertically for very small screens */
   }
 
   .section-title {
-      font-size: 1.5em;
+    font-size: 1.5em;
+  }
+
+  .cta button {
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }
 
-.card-icon {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; 
+/* Surface Duo specific styles */
+@media (min-width: 540px) and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stack cards vertically for Surface Duo */
+  }
 }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center; 
-}
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.card h3 {
-  margin-top: 0;
-  color: #350158;
-  font-size: 1.2em;
-}
-
-.card p {
-  font-size: 1em;
-  line-height: 1.5;
-  margin-top: 10px;
-}
 
 /* event4 start */
 
