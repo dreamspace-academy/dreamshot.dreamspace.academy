@@ -1,11 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>DreamShot</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+        integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/src/flipdown.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="event.css" rel="stylesheet">
+
+
 </head>
-<body>
-    
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div
+            class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1 class="sitename">DreamShot</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/index.html" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="dropdown"><a href="#events"><span>Events</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="#">Frontline Innovation</a></li>
+                            <li><a href="#">Inspiring Entrepreneurship</a></li>
+                            <li><a href="#">Creativepreneurs For Artists</a></li>
+                            <li><a href="#">Reimagining Education</a></li>
+                            <li><a href="#">Tech for Social AI for Good</a></li>
+                            <li><a href="#">Poster Presentations Research & Ideas</a></li>
+                            <li><a href="#">Short Talks and Panel Discussions</a></li>
+                            <li><a href="#">Hackathons, Pitching Events, and Mentoring Sessions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="index.html#about">Join Us</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <!-- <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-light mb-4 animated slideInDown">Creativepreneurs </h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-light" aria-current="page">Creativepreneurs </li>
+                    </ol>
+                </nav>
+            </div>
+        </div> -->
+        <!-- /Hero Section -->
+
+        <!-- About Section -->
+        <section id="event-4-about" class="event4-about-section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4 align-items-center justify-content-between">
+
+                    <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="story-award section-title text-center my-2 py-3"> Join us for 5-minute discussions
+                            that spark innovation, creativity, and change.</h1>
+
+                        <p class="mt-4">Discover a series of engaging, bite-sized talks designed to inspire fresh ideas
+                            and drive impactful conversations. These dynamic discussions connect you with changemakers
+                            and thought leaders exploring transformative topics in sustainability, technology, and
+                            beyond. Experience a fast-paced exchange of ideas that empowers you to think differently and
+                            take action.</p>
+
+                        <div class="row feature-list-wrapper">
+                            <div class="col-md-6">
+                                <!-- <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Workshops and Demonstrations</li>
+                <li><i class="bi bi-check-circle-fill"></i> Storytelling Through Making</li>
+                <li><i class="bi bi-check-circle-fill"></i> Learning Zones for Local Solutions</li>
+              </ul> -->
+                            </div>
+                            <div class="col-md-6">
+                                <!-- <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Youth-Led Innovations</li>
+                <li><i class="bi bi-check-circle-fill"></i>Cultural Fusion Hackathon </li>
+                <li><i class="bi bi-check-circle-fill"></i> Educator Training</li>
+              </ul> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <img class="img-fluid bg-white w-100 mb-3 wow fadeIn" data-wow-delay="0.1s"
+                                    src="img-events/event2.png" alt="">
+                                <img class="img-fluid bg-white w-50 wow fadeIn" data-wow-delay="0.2s"
+                                    src="img-events/image (5).jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid bg-white w-50 mb-3 wow fadeIn" data-wow-delay="0.3s"
+                                    src="img-events/image (7).jpg" alt="">
+                                <img class="img-fluid bg-white w-100 wow fadeIn" data-wow-delay="0.4s"
+                                    src="img-events/image-4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- /About Section -->
+
+        <!--Discussion start -->
+        <div class="container-xxl py-6">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                    <h1 class="section-title text-center my-2 py-3">Discussion Topics</h1>
+                    <!-- <p class="text-uppercase mb-2">// Our Team</p> -->
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="Discussion-item text-center rounded overflow-hidden">
+                            <img class="img-fluid" src="img-events/event4pic3.jpg" alt="">
+                            <div class="Discussion-text">
+                                <div class="Discussion-title">
+                                    <h5>The Art of Sustainable Creativity</h5>
+                                    <!-- <span>Designation</span> -->
+                                </div>
+                                <div class="Discussion-social">
+                                    <!-- <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-instagram"></i></a> -->
+                                    <p>Explore how creativity can drive sustainability and positive impact.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="Discussion-item text-center rounded overflow-hidden">
+                            <img class="img-fluid" src="img-events/event4pic4.jpg" alt="">
+                            <div class="Discussion-text">
+                                <div class="Discussion-title">
+                                    <h5>Innovation Beyond Borders</h5>
+                                    <!-- <span>Designation</span> -->
+                                </div>
+                                <div class="Discussion-social">
+                                    <!-- <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-instagram"></i></a> -->
+                                    <p>Discuss global innovations and their potential to break barriers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="Discussion-item text-center rounded overflow-hidden">
+                            <img class="img-fluid" src="img-events/event4pic4.jpg" alt="">
+                            <div class="Discussion-text">
+                                <div class="Discussion-title">
+                                    <h5> Bridging the Digital Divide</h5>
+                                    <!-- <span>Designation</span> -->
+                                </div>
+                                <div class="Discussion-social">
+                                    <!-- <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-instagram"></i></a> -->
+                                    <p>Learn how technology can be used to bridge gaps and empower underserved
+                                        communities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="Discussion-item text-center rounded overflow-hidden">
+                            <img class="img-fluid" src="img-events/event4pic3.jpg" alt="">
+                            <div class="Discussion-text">
+                                <div class="Discussion-title">
+                                    <h5>Humans, Machines, and Beyond</h5>
+                                    <!-- <span>Designation</span> -->
+                                </div>
+                                <div class="Discussion-social">
+                                    <!-- <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-light rounded-circle" href=""><i
+                                            class="fab fa-instagram"></i></a> -->
+                                    <p>A look into the future of human-machine collaboration and its possibilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Discussion end-->
+
+        <!-- Open Mic start -->
+        <div class="mt-5 container">
+            <h1 class="section-title text-center my-2 py-3">Interactive Open Mic</h1>
+            <div class="why-participate">
+                <div class="reason">
+                    <img src="img-events/inspirational.png" alt="Engage with Experts">
+                    <h5>Engage with Experts</h5>
+                    <p>Audience members are invited to ask panelists thought-provoking questions.</p>
+                </div>
+                <div class="reason">
+                    <img src="img-events/discussion.png" alt="Gain Feedback">
+                    <h5>Interactive Q&A</h5>
+                    <p>Panelists will answer questions in a 5-minute session, sparking conversation and deeper understanding.</p>
+                </div>
+                <!-- <div class="reason">
+                    <img src="img-events/networking.png" alt="Network">
+                    <h5>Network</h5>
+                    <p>Build meaningful connections with like-minded individuals passionate about sustainability.</p>
+                </div> -->
+            </div>
+        </div>
+        <!-- Open Mic end -->
+
+        <!-- Meet the Panelists start -->
+        <div class="about_section layout_padding mt-5 py-2 container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="img_container">
+                            <div class="img-box b1">
+                                <img src="img-events/event4card1pic2.jpg" alt="">
+                            </div>
+                            <div class="img-box b2">
+                                <img src="img-events/event4card1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-box">
+                            <h1 class="section-title mt-2">
+                                Meet the Panelists
+                            </h1>
+                            <p>
+                                Our panelists bring a wealth of knowledge and experience across various fields of
+                                innovation, sustainability, and technology. Prepare for an insightful exchange of ideas!
+                            </p>
+                            <!-- <a href="">
+                      Read More
+                    </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Meet the Panelists end -->
+
+        <!-- gallery -->
+        <div class="gallery section">
+
+            <!-- Section Title -->
+            <div class="container " data-aos="fade-up">
+                <h2 class="section-title text-center ">Gallery of Past Presentations</h2>
+                <p class="text-center my-4 py-2">Step into a world of ideas and innovation as we showcase groundbreaking
+                    research
+                    and projects from past exhibitions. These poster presentations spotlight the creativity and
+                    dedication of individuals and teams working towards a sustainable future.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                    <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-Innovative-Urban-Farming-Solutions">Farming Solutions</li>
+                        <li data-filter=".filter-AI-for-Sustainable-Resource-Management">AI</li>
+                        <li data-filter=".filter-Circular-Economy-in-Textile-Industry">Economy Textile Industry</li>
+                        <li data-filter=".filter-Biodegradable-Packaging-Solutions">Biodegradable-Packaging-Solutions
+                        </li>
+                    </ul><!-- End gallery Filters -->
+
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Innovative-Urban-Farming-Solutions">
+                            <img src="img-events/gallery-img/gallery-1.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Innovative-Urban-Farming-Solutions 1</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-1.jpg" title="Innovative-Urban-Farming-Solutions 1" data-gallery="gallery-gallery-Innovative-Urban-Farming-Solutions" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-AI-for-Sustainable-Resource-Management">
+                            <img src="img-events/gallery-img/gallery-2.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>AI 1</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-2.jpg" title="AI 1" data-gallery="gallery-gallery-AI-for-Sustainable-Resource-Management" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Circular-Economy-in-Textile-Industry">
+                            <img src="img-events/gallery-img/gallery-3.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Circular-Economy-in-Textile-Industry 1</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-3.jpg" title="Circular-Economy-in-Textile-Industry 1" data-gallery="gallery-gallery-Circular-Economy-in-Textile-Industry" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Innovative-Urban-Farming-Solutions">
+                            <img src="img-events/gallery-img/gallery-4.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Innovative-Urban-Farming-Solutions 2</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-4.jpg" title="Innovative-Urban-Farming-Solutions 2" data-gallery="gallery-gallery-Innovative-Urban-Farming-Solutions" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-AI-for-Sustainable-Resource-Management">
+                            <img src="img-events/gallery-img/gallery-5.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>AI 2</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-5.jpg" title="AI 2" data-gallery="gallery-gallery-AI-for-Sustainable-Resource-Management" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Circular-Economy-in-Textile-Industry">
+                            <img src="img-events/gallery-img/gallery-6.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Circular-Economy-in-Textile-Industry 2</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-6.jpg" title="Circular-Economy-in-Textile-Industry 2" data-gallery="gallery-gallery-Circular-Economy-in-Textile-Industry" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Biodegradable-Packaging-Solutions">
+                            <img src="img-events/gallery-img/gallery-2.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Biodegradable-Packaging-Solutions 1</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-2.jpg" title="Biodegradable-Packaging-Solutions 1" data-gallery="gallery-gallery-Biodegradable-Packaging-Solutions" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Innovative-Urban-Farming-Solutions">
+                            <img src="img-events/gallery-img/gallery-7.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Innovative-Urban-Farming-Solutions 3</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-7.jpg" title="Innovative-Urban-Farming-Solutions 3" data-gallery="gallery-gallery-Innovative-Urban-Farming-Solutions" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-AI-for-Sustainable-Resource-Management">
+                            <img src="img-events/gallery-img/gallery-8.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>AI 3</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-8.jpg" title="AI 3" data-gallery="gallery-gallery-AI" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Biodegradable-Packaging-Solutions">
+                            <img src="img-events/gallery-img/gallery-3.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Biodegradable-Packaging-Solutions 2</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-3.jpg" title="Biodegradable-Packaging-Solutions 1" data-gallery="gallery-gallery-Biodegradable-Packaging-Solutions" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Circular-Economy-in-Textile-Industry">
+                            <img src="img-events/gallery-img/gallery-9.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Circular-Economy-in-Textile-Industry 3</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-9.jpg" title="Circular-Economy-in-Textile-Industry 2" data-gallery="gallery-gallery-Circular-Economy-in-Textile-Industry" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                        <div
+                            class="col-lg-4 col-md-6 gallery-item isotope-item filter-Biodegradable-Packaging-Solutions">
+                            <img src="img-events/gallery-img/gallery-2.jpg" class="img-fluid" alt="">
+                            <div class="gallery-info">
+                                <h4>Biodegradable-Packaging-Solutions 3</h4>
+                                <p>content will update with image</p>
+                                <!-- <a href="img-events/gallery-img/gallery-2.jpg" title="Biodegradable-Packaging-Solutions 1" data-gallery="gallery-gallery-Biodegradable-Packaging-Solutions" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                                <!-- <a href="gallery-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                            </div>
+                        </div><!-- End gallery Item -->
+
+                    </div><!-- End gallery Container -->
+
+                </div>
+
+            </div>
+
+        </div><!-- End gallery Section -->
+
+        <!-- /gallery -->
+
+    </main>
+
+    <footer id="footer" class="footer">
+
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">DreamSpace Academy</strong> <span>All Rights
+                    Reserved</span></p>
+            <div class="credits">
+                Designed by <a href="https://dreamspace.academy/">DreamSpace Technologies</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <script src="event.js"></script>
+
+
 </body>
+
 </html>
