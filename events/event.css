@@ -2373,7 +2373,6 @@ footer a:hover {
 # Poster presentation page event-6
 --------------------------------------------------------------*/
 .poster-blog {
-  /* padding: 120px 0 90px; */
   margin-top: 5vh;
 }
 
@@ -2383,8 +2382,8 @@ footer a:hover {
 
 .poster-blog-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr; /* Default: 1 column on smaller screens */
+  gap: 20px;
 }
 
 .single-poster-blog-item {
@@ -2405,7 +2404,7 @@ footer a:hover {
 .single-poster-blog-item-txt h2 a {
   text-transform: initial;
   line-height: 1.8;
-  color: #350158; /* Changed color */
+  color: #350158;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -2413,7 +2412,7 @@ footer a:hover {
 
 .single-poster-blog-item-txt h4 {
   font-size: 14px;
-  color: #350158; /* Changed color */
+  color: #350158;
   font-weight: 400;
   margin: 12px 0 20px;
 }
@@ -2421,15 +2420,15 @@ footer a:hover {
 .single-poster-blog-item-txt h4 a {
   font-size: 14px;
   padding-right: 14px;
-  border-right: 1px solid #350158; /* Changed color */
+  border-right: 1px solid #350158;
   margin-right: 15px;
   text-transform: uppercase;
-  color: #350158; /* Changed color */
+  color: #350158;
   text-decoration: none;
 }
 
 .single-poster-blog-item:hover h2 a {
-  color: #350158; /* Changed color */
+  color: #350158;
 }
 
 .single-poster-blog-item:hover {
@@ -2442,7 +2441,7 @@ footer a:hover {
 }
 
 .section-header h2 {
-  color: #350158; /* Changed color */
+  color: #350158;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -2452,19 +2451,30 @@ footer a:hover {
 
 .section-header p {
   font-size: 16px;
-  color: #350158; /* Changed color */
+  color: #350158;
 }
 
-/* Responsive styles */
-@media (min-width: 768px) {
+/* Responsive styles for iPad (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .poster-blog-grid {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 items in a row for iPads and similar devices */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+
+  .single-poster-blog-item {
+    max-width: 100%; /* Ensure cards take up the full width */
   }
 }
 
-@media (min-width: 1024px) {
+/* Fix for iPad Pro (1024px and above) */
+@media (min-width: 1024px) and (max-width: 1200px) {
   .poster-blog-grid {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Maintain 3 items per row */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+
+  .single-poster-blog-item {
+    max-width: 100%; /* Cards take full width */
   }
 }
 
@@ -2479,27 +2489,28 @@ footer a:hover {
 
 @media (min-width: 576px) {
   .container {
-      max-width: 540px;
+    max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-      max-width: 720px;
+    max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-      max-width: 960px;
+    max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-      max-width: 1140px;
+    max-width: 1140px;
   }
 }
+
 
 /* why participate */
 .why-participate {
