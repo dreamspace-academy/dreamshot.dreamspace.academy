@@ -1717,7 +1717,7 @@ section {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Three cards per row */
   gap: 20px;
 }
 
@@ -1728,6 +1728,7 @@ section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
 .card:hover {
@@ -1783,72 +1784,61 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.card-icon {
+  width: 50px; /* Increased icon size */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Three cards side by side */
+  }
+
+  .card {
+    margin: 0 10px;
+  }
+}
+
 @media (max-width: 768px) {
-  header h1 {
-      font-size: 2em;
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Ensure three cards stay side by side on smaller tablets */
   }
 
-  header p {
-      font-size: 1em;
-  }
-
-  .card p {
-      font-size: 0.9em;
+  .card {
+    margin: 0 10px;
   }
 
   .cta button {
-      padding: 10px 20px;
-      font-size: 1em;
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 480px) {
-  header h1 {
-      font-size: 1.8em;
-  }
-
-  header p {
-      font-size: 0.9em;
+  .grid {
+    grid-template-columns: 1fr; /* Stack cards vertically for very small screens */
   }
 
   .section-title {
-      font-size: 1.5em;
+    font-size: 1.5em;
+  }
+
+  .cta button {
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }
 
-.card-icon {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px; 
+/* Surface Duo specific styles */
+@media (min-width: 540px) and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stack cards vertically for Surface Duo */
+  }
 }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center; 
-}
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.card h3 {
-  margin-top: 0;
-  color: #350158;
-  font-size: 1.2em;
-}
-
-.card p {
-  font-size: 1em;
-  line-height: 1.5;
-  margin-top: 10px;
-}
 
 /* event4 start */
 
@@ -2373,7 +2363,6 @@ footer a:hover {
 # Poster presentation page event-6
 --------------------------------------------------------------*/
 .poster-blog {
-  /* padding: 120px 0 90px; */
   margin-top: 5vh;
 }
 
@@ -2383,8 +2372,8 @@ footer a:hover {
 
 .poster-blog-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr; /* Default: 1 column on smaller screens */
+  gap: 20px;
 }
 
 .single-poster-blog-item {
@@ -2405,7 +2394,7 @@ footer a:hover {
 .single-poster-blog-item-txt h2 a {
   text-transform: initial;
   line-height: 1.8;
-  color: #350158; /* Changed color */
+  color: #350158;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -2413,7 +2402,7 @@ footer a:hover {
 
 .single-poster-blog-item-txt h4 {
   font-size: 14px;
-  color: #350158; /* Changed color */
+  color: #350158;
   font-weight: 400;
   margin: 12px 0 20px;
 }
@@ -2421,15 +2410,15 @@ footer a:hover {
 .single-poster-blog-item-txt h4 a {
   font-size: 14px;
   padding-right: 14px;
-  border-right: 1px solid #350158; /* Changed color */
+  border-right: 1px solid #350158;
   margin-right: 15px;
   text-transform: uppercase;
-  color: #350158; /* Changed color */
+  color: #350158;
   text-decoration: none;
 }
 
 .single-poster-blog-item:hover h2 a {
-  color: #350158; /* Changed color */
+  color: #350158;
 }
 
 .single-poster-blog-item:hover {
@@ -2442,7 +2431,7 @@ footer a:hover {
 }
 
 .section-header h2 {
-  color: #350158; /* Changed color */
+  color: #350158;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -2452,19 +2441,30 @@ footer a:hover {
 
 .section-header p {
   font-size: 16px;
-  color: #350158; /* Changed color */
+  color: #350158;
 }
 
-/* Responsive styles */
-@media (min-width: 768px) {
+/* Responsive styles for iPad (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .poster-blog-grid {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 items in a row for iPads and similar devices */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+
+  .single-poster-blog-item {
+    max-width: 100%; /* Ensure cards take up the full width */
   }
 }
 
-@media (min-width: 1024px) {
+/* Fix for iPad Pro (1024px and above) */
+@media (min-width: 1024px) and (max-width: 1200px) {
   .poster-blog-grid {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Maintain 3 items per row */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+
+  .single-poster-blog-item {
+    max-width: 100%; /* Cards take full width */
   }
 }
 
@@ -2479,27 +2479,28 @@ footer a:hover {
 
 @media (min-width: 576px) {
   .container {
-      max-width: 540px;
+    max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-      max-width: 720px;
+    max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-      max-width: 960px;
+    max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-      max-width: 1140px;
+    max-width: 1140px;
   }
 }
+
 
 /* why participate */
 .why-participate {
@@ -2514,7 +2515,7 @@ footer a:hover {
   padding: 30px;
   background-color: var(--card-bg);
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -2533,45 +2534,60 @@ footer a:hover {
   margin-bottom: 10px;
 }
 
-/* leading institution */
-.institutions {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  overflow: hidden;
-  position: relative;
+/* Add media query for larger devices like tablets */
+@media (min-width: 768px) {
+  .why-participate {
+    grid-template-columns: repeat(3, 1fr); /* Shows 3 items in a row on tablets and larger screens */
+  }
 }
 
-/* Scrolling Container */
+
+/* leading institution */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.institutions {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
 .scrolling-container {
   display: flex;
-  width: 100%;
-  animation: scroll 30s linear infinite;
-  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
-/* Individual Institution Card */
 .institution {
-  background-color: var(--card-bg);
+  background-color: var(--card-bg, #f9f9f9);
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: calc(20% - 20px);
+  width: calc(20% - 20px); /* Original width for cards */
   min-width: 200px;
-  transition: transform 0.3s ease;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Hover Effect */
-.institution:hover {
-  transform: translateY(-5px);
-}
-
-/* Image Styling */
 .institution img {
   width: 80px;
   height: 80px;
@@ -2579,38 +2595,15 @@ footer a:hover {
   margin-bottom: 10px;
 }
 
-/* Infinite Scroll Animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-  .institution {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .institution {
-    width: calc(100% - 20px);
-  }
-}
-/* Scroll Buttons Styling */
 .scroll-left, .scroll-right {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
   z-index: 10;
 }
 
@@ -2622,52 +2615,19 @@ footer a:hover {
   right: 10px;
 }
 
-/* Container for Institutions */
-.institutions {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  overflow: hidden;
-  position: relative;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .institution {
+    width: calc(50% - 20px); /* Wider cards on smaller screens */
+  }
 }
 
-/* Scrolling Container */
-.scrolling-container {
-  display: flex;
-  width: 100%;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
+@media (max-width: 480px) {
+  .institution {
+    width: calc(100% - 20px); /* Full-width cards on very small screens */
+  }
 }
 
-/* Individual Institution Card */
-.institution {
-  background-color: var(--card-bg);
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: calc(20% - 20px);
-  min-width: 200px;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Hover Effect */
-.institution:hover {
-  transform: translateY(-5px);
-}
-
-/* Image Styling */
-.institution img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
 
 
 /* gallery */
@@ -2841,6 +2801,69 @@ footer a:hover {
 .Discussion-item:hover .Discussion-social {
   top: 0;
 }
+
+/* Base styles for the section */
+.mt-5.container {
+  margin-top: 5rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #350158;
+  font-size: 1.8em;
+}
+
+.open-mic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid to auto-fit */
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.reason {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.reason:hover {
+  transform: scale(1.05);
+}
+
+.reason img {
+  width: 80px; /* Set icon size */
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.reason h5 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.reason p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Adjust for tablets and larger screens (2 items per row) */
+@media (min-width: 768px) {
+  .open-mic {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row on larger screens */
+  }
+}
+
+/* Adjust for mobile or smaller screens (1 item per row) */
+@media (max-width: 480px) {
+  .open-mic {
+    grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+  }
+}
+
 
 /* Meet the Panelists */
 .about_section {
