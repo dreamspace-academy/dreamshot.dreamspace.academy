@@ -2534,44 +2534,51 @@ footer a:hover {
 }
 
 /* leading institution */
-.institutions {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  overflow: hidden;
-  position: relative;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Scrolling Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.institutions {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
 .scrolling-container {
   display: flex;
-  width: 100%;
-  animation: scroll 30s linear infinite;
-  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
-/* Individual Institution Card */
 .institution {
-  background-color: var(--card-bg);
+  background-color: var(--card-bg, #f9f9f9);
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: calc(20% - 20px);
+  width: calc(20% - 20px); /* Original width for cards */
   min-width: 200px;
-  transition: transform 0.3s ease;
+  margin: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Hover Effect */
-.institution:hover {
-  transform: translateY(-5px);
-}
-
-/* Image Styling */
 .institution img {
   width: 80px;
   height: 80px;
@@ -2579,38 +2586,15 @@ footer a:hover {
   margin-bottom: 10px;
 }
 
-/* Infinite Scroll Animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-  .institution {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .institution {
-    width: calc(100% - 20px);
-  }
-}
-/* Scroll Buttons Styling */
 .scroll-left, .scroll-right {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
   z-index: 10;
 }
 
@@ -2622,52 +2606,19 @@ footer a:hover {
   right: 10px;
 }
 
-/* Container for Institutions */
-.institutions {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  overflow: hidden;
-  position: relative;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .institution {
+    width: calc(50% - 20px); /* Wider cards on smaller screens */
+  }
 }
 
-/* Scrolling Container */
-.scrolling-container {
-  display: flex;
-  width: 100%;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
+@media (max-width: 480px) {
+  .institution {
+    width: calc(100% - 20px); /* Full-width cards on very small screens */
+  }
 }
 
-/* Individual Institution Card */
-.institution {
-  background-color: var(--card-bg);
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: calc(20% - 20px);
-  min-width: 200px;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Hover Effect */
-.institution:hover {
-  transform: translateY(-5px);
-}
-
-/* Image Styling */
-.institution img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
 
 
 /* gallery */
