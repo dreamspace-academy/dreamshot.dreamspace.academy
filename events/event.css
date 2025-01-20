@@ -2514,7 +2514,7 @@ footer a:hover {
   padding: 30px;
   background-color: var(--card-bg);
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -2532,6 +2532,14 @@ footer a:hover {
   color: var(--accent-color);
   margin-bottom: 10px;
 }
+
+/* Add media query for larger devices like tablets */
+@media (min-width: 768px) {
+  .why-participate {
+    grid-template-columns: repeat(3, 1fr); /* Shows 3 items in a row on tablets and larger screens */
+  }
+}
+
 
 /* leading institution */
 body {
