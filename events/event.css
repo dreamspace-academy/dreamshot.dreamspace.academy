@@ -2747,6 +2747,79 @@ footer a:hover {
   }
 }
 
+/* guidelines */
+.guidelines {
+  display: flex;
+  flex-wrap: wrap;
+  /* border-radius: 20px; */
+  color: black;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+.guidelines-heading {
+  color: #350158;
+  text-align: start;
+  font-size: 1.75em;
+  padding-bottom: 5px; /* Space between the text and underline */
+}
+
+.guidelines-total,
+.col-lg-4 {
+  flex: 1 1 30%; /* Allows flexible resizing and spacing */
+  min-width: 250px; /* Ensures proper layout on smaller screens */
+  margin: 10px;
+  padding-top: 5px;
+}
+
+.guidelines-list {
+  text-align: start;
+  padding-top: 10px;
+}
+
+.guidelines-list li {
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+
+.guidelines-image {
+  padding-bottom: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .guidelines {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center align all items */
+  }
+
+  .guidelines-total,
+  .guidelines-image,
+  .col-lg-4 {
+    flex: 1 1 100%; /* Ensure each item takes full width */
+    margin: 10px 0; /* Reduce margin on small screens */
+  }
+
+  .guidelines-heading {
+    font-size: 1.5em; /* Smaller font size for headings on mobile */
+  }
+
+  .guidelines-list {
+    padding-top: 5px; /* Reduce padding for mobile */
+  }
+}
+
+/* iPad responsiveness (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .guidelines-total h5,
+  .guidelines-heading {
+    text-align: left; /* Align "Design and Layout" heading to the left */
+  }
+}
+
+
+
+
 
 /* why participate */
 /* Section Styling */
