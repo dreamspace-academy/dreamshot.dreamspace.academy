@@ -2269,3 +2269,48 @@ footer a:hover {
   margin-bottom: 8px;
   color: #555;
 }
+
+
+/* AI */
+.logistics {
+  background:  #f9fbfd;
+  padding-top:  50px;
+}
+.logistics-horizontal-timeline {
+  padding: 5px 0;
+}
+
+/*.logistics-horizontal-timeline*/
+.logistics-horizontal-timeline .col-sm-4 {padding:0 2px;}
+
+.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
+.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
+.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
+.single-horizontal-timeline p {color: black;max-width: 335px;}
+
+/*.timeline-horizontal-border*/
+.timeline-horizontal-border {
+  display:  flex;
+  align-items: center;
+  padding: 6px 0 9px;
+}
+.timeline-horizontal-border i {
+  font-size:  40px;
+  color: #350158;
+  margin-right:  5px;
+}
+span.single-timeline-horizontal {
+  display:  inline-block;
+  background: #b2c1ce;
+  height:  1px;
+  width: 400px;
+}
+span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
+.logistics-heading{
+  color: #350158;
+  font-size: 1.2rem;
+}
+
+.logistics-list{
+  font-size: 0.85rem;
+}
