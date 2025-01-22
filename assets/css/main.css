@@ -25,7 +25,7 @@
 }
 
 .light-background {
-  --background-color: #f3f9ff;
+  --background-color: #fbf3ff;
   --surface-color: #ffffff;
 }
 
@@ -2635,52 +2635,16 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-/* .starter-section { */
-/* Add your styles here */
-/* } */
 
-/* --------------------------------------------------------------
-# Events Section
---------------------------------------------------------------*/
-/* .events .event-item {
-  background-color: var(--surface-color);
-  border-radius: 5px;
-  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
-  height: 100%;
-  text-align: center;
-}
-
-.events .event-img img {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  width: 100%;
-  height: auto;
-}
-
-.events .event-info {
-  padding: 15px;
-}
-
-.events .event-info h4 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.events .event-info p {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0;
-} */
 .events .event-item {
   background-color: var(--surface-color);
   border-radius: 5px;
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
-  height: 420px; /* Set the fixed height for the event (cart) */
+  height: 420px;
   text-align: center;
   display: flex;
-  flex-direction: column; /* Ensures the content is stacked vertically */
-  justify-content: space-between; /* Adjusts space between image and button */
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .events .event-img img {
@@ -2688,6 +2652,8 @@ section,
   border-top-right-radius: 5px;
   width: 100%;
   height: auto;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
 .events .event-info {
@@ -2695,7 +2661,7 @@ section,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-grow: 1; /* Ensures the event-info section takes up available space */
+  flex-grow: 1;
 }
 
 .events .event-info h4 {
@@ -2710,17 +2676,16 @@ section,
   margin: 0;
 }
 
-/* Event section read more button */
 .event-item .btn-readmore {
   color: var(--contrast-color);
   background: var(--accent-color);
   font-size: 14px;
   padding: 8px 20px;
-  margin: 20px auto 0; /* Center button horizontally with margin */
+  margin: 20px auto 0;
   border-radius: 50px;
   transition: 0.3s;
-  display: block; /* Make button a block-level element */
-  text-align: center; /* Center text inside button */
+  display: block;
+  text-align: center;
 }
 
 .event-item .btn-readmore:hover,
@@ -2729,18 +2694,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-/* Event section read more button */
-/* .event-item .btn-readmore,
-.event-item .btn-readmore:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-size: 14px;
-  padding: 8px 20px;
-  margin: 0 0 0 30px;
-  border-radius: 50px;
-  transition: 0.3s;
-} */
-
 .event-item .btn-readmore {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -2749,10 +2702,10 @@ section,
   margin: 0;
   border-radius: 50px;
   transition: 0.3s;
-  display: inline-block; /* Makes the button behave like a block-level element */
-  text-align: center; /* Ensures text inside button is centered */
-  margin-top: auto; /* Pushes button to the bottom if using flexbox layout */
-  align-self: center; /* Horizontally centers the button within the parent */
+  display: inline-block;
+  text-align: center;
+  margin-top: auto;
+  align-self: center;
 }
 
 .event-item .btn-readmore:hover,
