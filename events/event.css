@@ -2688,6 +2688,66 @@ footer a:hover {
   }
 }
 
+/* new-post */
+/* From Uiverse.io by SteveBloX */ 
+.tms-card {
+  box-sizing: border-box;
+  width: 100%;
+  height: 350px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin: 8px;
+}
+
+.single-poster-blog-item-img img {
+  width: 100%;
+  height: 200px;  /* Adjust height as needed */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
+
+.tms-card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.tms-card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.tms-title {
+  color: #350158;
+}
+
+.tms-parah {
+  font-size: 0.75rem;
+}
+
+/* Custom responsive layout */
+@media (max-width: 576px) {
+  .tms-card {
+    height: auto;
+  }
+  .tms-parah {
+    font-size: 0.85rem;
+  }
+}
+
+
 /* why participate */
 /* Section Styling */
 .section {
