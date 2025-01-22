@@ -1,6 +1,20 @@
 (function () {
   'use strict';
 
+  // Preloader
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      setTimeout(() => {
+        preloader.style.transition = 'opacity 0.6s';
+        preloader.style.opacity = 0;
+        setTimeout(() => {
+          preloader.remove();
+        }, 600);
+      }, 100);
+    }
+  });
+
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */

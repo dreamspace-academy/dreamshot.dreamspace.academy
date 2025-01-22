@@ -21,7 +21,7 @@
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
   --nav-dropdown-color: #212529;
-  --nav-dropdown-hover-color: #0d83fd;
+  --nav-dropdown-hover-color: #701fcf;
 }
 
 .light-background {
@@ -80,6 +80,83 @@ h6 {
   padding-top: 10px;
   z-index: 999;
   transition: top 0.5s ease, left 0.5s ease, transform 0.5s ease;
+}
+
+/*--------------------------------------------------------------
+# Pre Loader
+--------------------------------------------------------------*/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: transparent;
+}
+.load-wrapper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.dot7 {
+  margin: 0;
+  position: absolute;
+}
+.dot70 {
+  width: 100px;
+  height: 100px;
+  background-color: #701fcf;
+  z-index: 1;
+}
+.dot71 {
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  z-index: 5;
+  animation: expand7 3s linear infinite;
+}
+.dot72 {
+  width: 60px;
+  height: 60px;
+  background: #350158;
+  z-index: 10;
+  animation: expand71 3s 500ms ease infinite;
+}
+.dot73 {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  z-index: 15;
+  animation: expand71 3s 200ms ease infinite;
+}
+@keyframes expand7 {
+  0%,
+  100% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes expand71 {
+  0%,
+  100% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(1);
+  }
 }
 
 /*--------------------------------------------------------------
