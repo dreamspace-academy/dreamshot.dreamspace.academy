@@ -2514,284 +2514,179 @@ footer a:hover {
 /*--------------------------------------------------------------
 # Poster presentation page event-6
 --------------------------------------------------------------*/
-.poster-blog {
-  margin-top: 5vh;
-}
-
-.poster-blog-content {
-  margin-top: 80px;
-}
-
-.poster-blog-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Default: 1 column on smaller screens */
-  gap: 20px;
-}
-
-.single-poster-blog-item {
-  box-shadow: 0 0px 5px rgba(71, 71, 71, .2);
-  transition: .3s;
-}
-
-.single-poster-blog-item-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.single-poster-blog-item-txt {
-  padding: 25px 28px 27px;
-}
-
-.single-poster-blog-item-txt h5 {
-  color: #350158;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.single-poster-blog-item-txt p {
-  font-size: 14px;
-  color: black;
-  font-weight: 400;
+/* Basic styles for the section */
+.section {
+  padding: 40px 10%;
+  background: #fcf6fd;
   margin-bottom: 20px;
 }
 
-.single-poster-blog-item:hover h5 {
-  color: #350158;
-}
-
-.single-poster-blog-item:hover {
-  box-shadow: 0 10px 20px rgba(21, 19, 19, .4);
-}
-
-.section-header {
+.section-title {
   text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-header h1 {
+  margin-bottom: 30px;
   color: #350158;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 10px;
+  font-size: 1.8em;
 }
 
-.section-header p {
-  font-size: 16px;
-  color: black;
+/* Grid layout for poster blog */
+.poster-blog-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
 }
 
-/* Responsive styles for iPad (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .poster-blog-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 items in a row for iPads */
-    gap: 20px; /* Adjust spacing between cards */
-  }
-
-  .single-poster-blog-item {
-    max-width: 100%; /* Ensure cards take up the full width */
-  }
-}
-
-/* Fix for iPad Pro (1024px and above) */
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .poster-blog-grid {
-    grid-template-columns: repeat(3, 1fr); /* Maintain 3 items per row for larger screens */
-    gap: 20px; /* Adjust spacing between cards */
-  }
-
-  .single-poster-blog-item {
-    max-width: 100%; /* Cards take full width */
-  }
-}
-
-/* Full screen layout (desktop) */
-@media (min-width: 1200px) {
-  .poster-blog-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row on large screens */
-    gap: 30px; /* Increased gap for larger screens */
-  }
-}
-
-/* Container responsiveness */
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-/* From Uiverse.io by SouravBandyopadhyay */
-.post {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.post-card-title {
-  color: #262626;
-  /* font-size: 1.5em; */
-  line-height: normal;
-  /* font-weight: 700; */
-  margin-bottom: 0.5em;
-}
-
-.post-small-desc {
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5em;
-  color: #452c2c;
-}
-
-.go-corner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  background: linear-gradient(135deg, #b34df7, #350158);
-  border-radius: 0 4px 0 32px;
-}
-
-.go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
-  color: white;
-  font-family: courier, sans;
-}
-
-/* From Uiverse.io by Pranali9922 */
-.open {
-  justify-items: center;
-}
-
-.card {
-  width: 300px; /* Previous card size */
-  height: 320px; /* Previous card size */
-  transition: all 0.2s;
-  position: relative;
-  cursor: pointer;
-  border: none; /* Remove any border */
-  box-shadow: none; /* Remove the outer box-shadow */
-  background: transparent; /* Optional: make the card background transparent */
-}
-
-.card-inner {
-  height: 100%; /* Keep dimensions consistent */
-  width: 100%; /* Ensure the inner card takes full width */
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Keep internal shadow */
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Blog card styling */
+.single-poster-blog-item {
+  background: #fff;
   padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.3s ease;
   text-align: center;
+  opacity: 0; /* Start invisible for animation */
+  transform: translateY(30px); /* Start lower for animation effect */
+  animation: fadeInUp 0.7s forwards; /* Animation for fade-in and upward movement */
 }
 
-.card-inner img {
-  width: 80px; /* Image size */
-  height: 80px;
-  margin-bottom: 20px; /* Space between image and text */
+.single-poster-blog-item:nth-child(1) {
+  animation-delay: 0.1s; /* Slight delay for the first item */
 }
 
-.card-inner h5 {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px; /* Space between heading and paragraph */
-  color: #350158; /* Heading color */
+.single-poster-blog-item:nth-child(2) {
+  animation-delay: 0.2s; /* Slight delay for the second item */
 }
 
-.card-inner p {
+.single-poster-blog-item:nth-child(3) {
+  animation-delay: 0.3s; /* Slight delay for the third item */
+}
+
+/* Hover effect */
+.single-poster-blog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  color: #350158; /* Change color on hover */
+}
+
+/* Image inside the post-blog item */
+.single-poster-blog-item-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Title inside post-blog items */
+.single-poster-blog-item h5 {
+  margin-top: 10px;
+  color: #0044cc; /* Default color before hover */
+  font-size: 1.5em;
+}
+
+.single-poster-blog-item:hover h5 {
+  color: white; /* Change to white on hover */
+}
+
+/* Text inside post-blog items */
+.single-poster-blog-item p {
   font-size: 1em;
   line-height: 1.5;
-  color: #333; /* Text color */
+  margin-top: 10px;
 }
 
-/* Hover, focus, and active effects */
-.card:hover,
-.card:focus,
-.card:active {
-  transform: scale(1.04) rotate(1deg); /* Scale and rotate on hover, focus, or active */
-  outline: none; /* Prevent default focus outline */
-}
-
-/* Circle animation */
-.circle {
-  width: 100px;
-  height: 100px;
-  background: repeating-linear-gradient(48deg, #3023ae 0%, #ff0099 100%);
-  border-radius: 35% 30% 75% 30% / 49% 30% 70% 51%;
-  position: absolute;
-  animation: move-up6 2s ease-in infinite alternate-reverse;
-}
-
-.circle:nth-child(1) {
-  top: -25px;
-  left: -25px;
-}
-
-.circle:nth-child(2) {
-  bottom: -25px;
-  right: -25px;
-  animation-name: move-down1;
-}
-
-/* Keyframe animations for circles */
-@keyframes move-up6 {
+/* Keyframe animation: Fade in and move up */
+@keyframes fadeInUp {
   to {
-    transform: translateY(-10px);
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
   }
 }
 
-@keyframes move-down1 {
-  to {
-    transform: translateY(10px);
+/* Call to Action (CTA) */
+.cta {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta button {
+  background: #0044cc;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s ease;
+}
+
+.cta button:hover {
+  background: #0033a1;
+}
+
+/* Footer styling */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 10%;
+  text-align: center;
+}
+
+footer a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for different screen sizes */
+
+/* Large screens (tablets and above) */
+@media (min-width: 768px) {
+  .poster-blog-content {
+    grid-template-columns: repeat(3, 1fr); /* 3 items in a row */
   }
 }
 
-/* Add touch support styles */
-@media (hover: none) and (pointer: coarse) {
-  .card:active {
-    transform: scale(1.04) rotate(1deg); /* Trigger hover effect on touch */
+/* Smaller tablets and medium screens */
+@media (max-width: 768px) {
+  .poster-blog-content {
+    grid-template-columns: repeat(2, 1fr); /* 2 items side by side */
+  }
+
+  .single-poster-blog-item {
+    margin: 0 10px;
+  }
+
+  .cta button {
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }
 
+/* Very small screens (phones and below) */
+@media (max-width: 480px) {
+  .poster-blog-content {
+    grid-template-columns: 1fr; /* Stack items vertically */
+  }
 
+  .section-title {
+    font-size: 1.5em;
+  }
 
+  .cta button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
 
+/* Surface Duo specific styles */
+@media (min-width: 540px) and (max-width: 600px) {
+  .poster-blog-content {
+    grid-template-columns: 1fr; /* Stack items vertically for Surface Duo */
+  }
+}
 
 /* why participate */
 /* Section Styling */
@@ -3211,68 +3106,16 @@ body {
   top: 0;
 }
 
-/* Base styles for the section */
-.mt-5.container {
-  margin-top: 5rem;
+/* open mic */
+.op-mc{
+  width: 350px;  /* Set the fixed width */
+    height: 450px; /* Set the fixed height */
+    margin: 10px;  /* Optional: Add margin between cards */
+    border: 1px solid #ccc;  /* Optional: Add a border */
+    padding: 20px;  /* Optional: Add padding inside the card */
+    box-sizing: border-box; /* Ensure padding/border are included in total size */
+    overflow: hidden;
 }
-
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #350158;
-  font-size: 1.8em;
-}
-
-.open-mic {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid to auto-fit */
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.reason {
-  text-align: center;
-  padding: 30px;
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.reason:hover {
-  transform: scale(1.05);
-}
-
-.reason img {
-  width: 80px; /* Set icon size */
-  height: 80px;
-  margin-bottom: 20px;
-}
-
-.reason h5 {
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-.reason p {
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-/* Adjust for tablets and larger screens (2 items per row) */
-@media (min-width: 768px) {
-  .open-mic {
-    grid-template-columns: repeat(2, 1fr); /* Two items per row on larger screens */
-  }
-}
-
-/* Adjust for mobile or smaller screens (1 item per row) */
-@media (max-width: 480px) {
-  .open-mic {
-    grid-template-columns: 1fr; /* Stack cards vertically on small screens */
-  }
-}
-
 
 /* Meet the Panelists */
 .about_section {
