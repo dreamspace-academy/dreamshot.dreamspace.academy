@@ -2690,93 +2690,105 @@ footer a:hover {
   font-family: courier, sans;
 }
 
-.post-card {
-  display: block;
+/* From Uiverse.io by Pranali9922 */
+.open {
+  justify-items: center;
+}
+
+.card {
+  width: 300px; /* Previous card size */
+  height: 320px; /* Previous card size */
+  transition: all 0.2s;
   position: relative;
-  width: 300px; /* Fixed width */
-  height: 430px; /* Fixed height */
-  background-color: #f2f8f9;
-  border-radius: 10px;
-  padding: 2em 1.2em;
-  margin: 12px;
-  text-decoration: none;
-  z-index: 0;
-  overflow: hidden;
-  background: linear-gradient(to bottom, #e6cbf9, #ddabfe);
-  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  border: none; /* Remove any border */
+  box-shadow: none; /* Remove the outer box-shadow */
+  background: transparent; /* Optional: make the card background transparent */
 }
 
-.post-card:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-  background: linear-gradient(135deg, #350158, #350158);
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 50% 50%;
-  transition: transform 0.35s ease-out;
-}
-
-.post-card:hover:before {
-  transform: scale(28);
-}
-
-.post-card:hover .post-small-desc {
-  transition: all 0.5s ease-out;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.post-card:hover .post-card-title {
-  transition: all 0.5s ease-out;
-  color: #ffffff;
-}
-
-.post-card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.card-inner {
+  height: 100%; /* Keep dimensions consistent */
+  width: 100%; /* Ensure the inner card takes full width */
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Keep internal shadow */
+  backdrop-filter: blur(10px);
   border-radius: 8px;
-  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Media Queries for Responsiveness */
+.card-inner img {
+  width: 80px; /* Image size */
+  height: 80px;
+  margin-bottom: 20px; /* Space between image and text */
+}
 
-/* iPad Mini and iPad (768px - 1024px) */
-@media (max-width: 1024px) {
-  .post {
-    justify-content: space-evenly;
-    gap: 16px;
+.card-inner h5 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between heading and paragraph */
+  color: #350158; /* Heading color */
+}
+
+.card-inner p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333; /* Text color */
+}
+
+/* Hover, focus, and active effects */
+.card:hover,
+.card:focus,
+.card:active {
+  transform: scale(1.04) rotate(1deg); /* Scale and rotate on hover, focus, or active */
+  outline: none; /* Prevent default focus outline */
+}
+
+/* Circle animation */
+.circle {
+  width: 100px;
+  height: 100px;
+  background: repeating-linear-gradient(48deg, #3023ae 0%, #ff0099 100%);
+  border-radius: 35% 30% 75% 30% / 49% 30% 70% 51%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+/* Keyframe animations for circles */
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
   }
 }
 
-/* Portrait Tablets and Below (Below 768px) */
-@media (max-width: 768px) {
-  .post {
-    justify-content: space-evenly;
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
   }
 }
 
-/* Mobile Devices (Below 480px) */
-@media (max-width: 480px) {
-  .post {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+/* Add touch support styles */
+@media (hover: none) and (pointer: coarse) {
+  .card:active {
+    transform: scale(1.04) rotate(1deg); /* Trigger hover effect on touch */
   }
 }
 
-/* Surface Duo (targeting around 540px screen width) */
-@media (max-width: 540px) {
-  .post {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-}
 
 
 
