@@ -1184,60 +1184,74 @@ a:hover {
   Demonstrations
   section
   --------------------------------------------------------------*/
+  /* re-image */
+  
   .service-item {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    transform: translateZ(0); /* Force GPU rendering to prevent glitches */
+    backface-visibility: hidden; /* Prevent flickering */
+    will-change: transform, opacity; /* Optimize for GPU rendering */
 }
 
-.service-item .service-content {
-  flex-grow: 1;
+.service-img img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Adjust content size */
-.service-item .popup-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(57, 19, 99, 0.9);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-  padding: 20px;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item:hover .service-img img {
+    transform: scale(1.1); /* Slightly enlarge the image */
+}
+
+.popup-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 19, 99, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    pointer-events: none;
 }
 
 .service-item:hover .popup-details {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
-/* Image inside cards */
-.service-img img {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+.service-content {
+    flex-grow: 1;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Card hover effect */
-.service-item:hover {
-  transform: scale(1.05);
-}
-
-/* Optional: Customize hover effect for content */
 .service-item:hover .service-content {
-  background-color: #391363;
-  color: #fff;
+    background-color: #391363;
+    color: #fff;
 }
+
+
 /* Interactive Startup Stalls Styles */
 .interactive-stalls .stall-item {
   background-color: var(--surface-color);
