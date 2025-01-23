@@ -1332,8 +1332,9 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  height: 120px; /* Adjust card height here */
+  /* height: 100px;  */
   margin: 20px;
+  
 }
 
 .entrepreneur-info h4 {
