@@ -2003,7 +2003,7 @@ a:hover {
   position: relative;
   height: 100px;
   overflow: hidden;
-  color: black;
+  color: white;
 }
 
 .discussion-item .discussion-text:hover {
