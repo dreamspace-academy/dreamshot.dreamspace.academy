@@ -43,6 +43,77 @@
 }
 
 /*--------------------------------------------------------------
+  # Global card styles
+  --------------------------------------------------------------*/
+
+/* .global-go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #d6a0fa;
+  border-radius: 0 4px 0 32px;
+} */
+
+
+.global-card1 {
+  display: block;
+  position: relative;
+  /* max-width: 262px; */
+  background: radial-gradient(circle, #dfc0fb, #d3a9f8, #c085f7);
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.global-card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: radial-gradient(circle, #350158, #6d00a4, #a349c4);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.global-card1:hover:before {
+  transform: scale(21);
+}
+
+.global-card1:hover p {
+  transition: all 0.3s ease-out;
+  color: white;
+}
+
+.global-card1:hover h5 {
+  transition: all 0.3s ease-out;
+  color: white;
+}
+
+
+.card-icon {
+  filter: invert(54%) sepia(67%) saturate(662%) hue-rotate(193deg) brightness(96%) contrast(-100%);
+  transition: filter 0.3s ease; /* Optional hover effect */
+}
+
+.global-card1:hover .card-icon {
+  filter: invert(80%) sepia(67%) saturate(100%) hue-rotate(500deg) brightness(100%) contrast(500%);
+}
+
+/*--------------------------------------------------------------
   # Ai for Good 
   --------------------------------------------------------------*/
 /* why section */
@@ -1692,7 +1763,7 @@ a:hover {
 
 /* Reason card styling */
 .reason {
-  background: #fff;
+  background: radial-gradient(circle, #dfc0fb, #d3a9f8, #c085f7);
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
