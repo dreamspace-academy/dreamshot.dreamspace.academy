@@ -1270,7 +1270,7 @@ section,
 # Speakers Section
 --------------------------------------------------------------*/
 
-#speakers {
+/* #speakers {
   padding: 60px 0 30px 0;
   background-color: #fcf6fd;
 }
@@ -1365,7 +1365,137 @@ section,
   color: #541163;
   font-size: 15px;
   margin-bottom: 10px;
+} */
+
+.Speakers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  gap: 10px;
 }
+
+.Speakers > div {
+  flex: 0 0 120px;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 1px 5px 15px #1e0e3e;
+  position: relative;
+  overflow: hidden;
+}
+
+.Speakers > div:nth-of-type(1) {
+  background: url("../img/speakers/Nevindaree\ Premarathne.jpg") no-repeat 50%/cover;
+}
+
+.Speakers > div:nth-of-type(2) {
+  background: url("../img/speakers/Heminda-Jayaweera.jpg") no-repeat 50%/cover;
+}
+
+.Speakers > div:nth-of-type(3) {
+  background: url("../img/speakers/Dr.Sankalpa\ Gamwarige.jpg") no-repeat 50%/cover;
+}
+
+.Speakers > div:nth-of-type(4) {
+  background: url("../img/speakers/Dr.-Sriashalya-Srivathsan.jpg") no-repeat 50%/cover;
+}
+
+.Speakers > div:nth-of-type(5) {
+  background: url("../img/speakers/Manish\ Jain.jpg") no-repeat 50%/cover;
+}
+
+.Speakers > div .Speakers-content {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  opacity: 0;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end; /* Align content at the bottom */
+  background: linear-gradient(0deg, rgba(2, 2, 46, 0.675) 0%, rgba(255, 255, 255, 0) 100%);
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0; /* Position content at the bottom */
+  width: 100%;
+}
+
+.Speakers > div .Speakers-content h2 {
+  margin-bottom: 5px; /* Add some spacing between h2 and span */
+  text-align: center;
+}
+
+.Speakers > div .Speakers-content span {
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.Speakers > div:hover {
+  flex: 0 0 250px;
+  box-shadow: 1px 3px 15px #7645d8;
+  transform: translateY(-30px);
+}
+
+.Speakers > div:hover .Speakers-content {
+  opacity: 1;
+  transform: translateY(0%);
+  visibility: visible;
+}
+@media screen and (max-width: 1024px) {
+  .Speakers {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .Speakers > div {
+    flex: 1 1 30%; 
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Speakers > div {
+    flex: 1 1 45%; 
+    height: 300px;
+  }
+
+  .Speakers > div .Speakers-content {
+    font-size: 1.2rem;
+  }
+
+  .Speakers > div .Speakers-content span {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Speakers {
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  .Speakers > div {
+    flex: 1 1 100%; 
+    height: 250px;
+  }
+
+  .Speakers > div .Speakers-content {
+    font-size: 1rem;
+    opacity: 1; 
+    visibility: visible;
+    transform: translateY(0); 
+  }
+
+  .Speakers > div .Speakers-content span {
+    font-size: 0.7rem;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Schedule Section
@@ -1422,7 +1552,6 @@ section,
   color: #000000;
   margin-bottom: 0;
 }
-
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
@@ -3187,3 +3316,7 @@ section,
     display: none;
   }
 }
+
+/*--------------------------------------------------------------
+# event organizers
+--------------------------------------------------------------*/
