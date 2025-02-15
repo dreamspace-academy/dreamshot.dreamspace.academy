@@ -206,7 +206,6 @@
   // var countDownDate = new Date('Feb 20, 2025 8:00:00').getTime();
   var countDownDate = new Date('Feb 19, 2025 09:00:00').getTime();
 
-
   // Update the count down every 1 second
   var x = setInterval(function () {
     // Get today's date and time
@@ -303,27 +302,27 @@ new Swiper('.card-wrapper', {
 
   // Pagination bullets
   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
   },
 
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 
   // Responsive breakpoints
   breakpoints: {
-      0: {
-          slidesPerView: 1
-      },
-      768: {
-          slidesPerView: 2
-      },
-      1024: {
-          slidesPerView: 3
-      }
-  }
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
 });
