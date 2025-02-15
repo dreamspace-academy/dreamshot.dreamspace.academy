@@ -2955,7 +2955,7 @@ section,
 
 #schedule .nav-tabs li {
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 #schedule .nav-tabs a {
@@ -3034,3 +3034,8 @@ section,
   color: #152b79;
   margin-bottom: 0;
 }
+
+
+/*--------------------------------------------------------------
+# industry experts
+--------------------------------------------------------------*/
