@@ -766,6 +766,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   position: relative;
+  background-color: var(--accent-color);
   padding-top: 160px;
   background: url('../img/hero-bg.svg');
   background-position: center;
@@ -1883,7 +1884,7 @@ section,
   transition: all 0.4s ease-in-out;
 }
 
-.sponsor{
+.sponsor {
   margin: auto;
   justify-content: center;
   border: 0;
@@ -1892,7 +1893,7 @@ section,
 .no-gutters,
 .supporters-wrap,
 .clearfix,
-.sponsor{
+.sponsor {
   border: none;
 }
 
