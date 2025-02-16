@@ -344,7 +344,10 @@ var swiper = new Swiper(".experts-slide-content", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
+  autoplay: {
+    delay: 1500,  
+    disableOnInteraction: false,  
+  },
   breakpoints: {
     0: {
       slidesPerView: 1,
