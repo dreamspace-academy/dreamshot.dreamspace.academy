@@ -345,10 +345,10 @@ var swiper = new Swiper(".experts-slide-content", {
     prevEl: ".swiper-button-prev",
   },
   autoplay: {
-    delay: 1500,  
+    delay: 2500,  
     disableOnInteraction: false,  
   },
-  speed: 500,  
+  speed: 800,  
   breakpoints: {
     0: {
       slidesPerView: 1,
