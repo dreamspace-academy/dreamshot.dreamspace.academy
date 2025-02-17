@@ -348,6 +348,7 @@ var swiper = new Swiper(".experts-slide-content", {
     delay: 1500,  
     disableOnInteraction: false,  
   },
+  speed: 500,  
   breakpoints: {
     0: {
       slidesPerView: 1,
