@@ -204,7 +204,7 @@
 
   // Set the date we're counting down to
   // var countDownDate = new Date('Feb 20, 2025 8:00:00').getTime();
-  var countDownDate = new Date('Feb 18, 2025 09:00:00').getTime();
+  var countDownDate = new Date('Feb 21, 2025 18:00:00').getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function () {
